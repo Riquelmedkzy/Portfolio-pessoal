@@ -9,6 +9,7 @@
 <title><?= e($title) ?> — Riquelme</title>
 <link rel="stylesheet" href="./styles.css">
 <script src="./script.js" defer></script>
+<meta name="google-site-verification" content="gNDShzKHgpaskpc8yahGDzTFPQXs2j8-X84CGmn6HhM" />
 </head>
 <body class="<?= $page === 'inicio' ? 'home-page' : 'inner-page' ?>" data-page="<?= e($page) ?>">
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
