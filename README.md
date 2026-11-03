@@ -66,3 +66,9 @@ XAMPP/Apache e PHP não estão disponíveis no ambiente de trabalho; wrappers PH
 ## Origem do conteúdo
 
 Informações pessoais e papéis nos três projetos principais confirmados por Riquelme. Consulte `docs/fontes.md`. Os quatro projetos complementares mantêm apenas o conteúdo do catálogo original; não foram inventados clientes, métricas ou depoimentos.
+
+## Refinamento visual
+
+O retrato agora usa PNG com transparência em ambos os temas. As capas de Aranhaverso e NexusFC mostram capturas das interfaces em computador e celular; ListaTarefas tem capa editorial porque não há screenshots disponíveis. Veja a origem em `docs/fontes.md`.
+
+`assets/js/motion.js` controla entradas, partículas e interações dos projetos. O botão “Pausar movimento” salva a preferência; o modo de movimento reduzido do sistema sempre prevalece. A faixa de Habilidades também conserva seu controle local.

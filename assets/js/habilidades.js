@@ -58,7 +58,7 @@ function drawScene(state) {
 }
 
 function canAnimate() {
-  return !document.hidden && !reducedMotion.matches && !main?.classList.contains('motion-paused');
+  return !document.hidden && !reducedMotion.matches && !main?.classList.contains('motion-paused') && !document.documentElement.classList.contains('motion-paused');
 }
 
 function updateScenePlayback() {
