@@ -1,0 +1,11 @@
+Options -Indexes
+DirectoryIndex index.php
+RewriteEngine On
+RewriteRule (^|/)\. - [F,L]
+RewriteRule ^(?:app|config|database|docs|logs|\.git|\.agents|\.codex|\.vscode)(?:/|$) - [F,L,NC]
+RewriteRule ^(?:README\.md|router\.php)$ - [F,L,NC]
+RewriteRule ^.*\.(?:log|sql|bak|ini)$ - [F,L,NC]
+RewriteCond %{REQUEST_URI} ^(.*/)?(index|sobre|projetos|habilidades|contato)\.html$
+RewriteRule ^(?:index|sobre|projetos|habilidades|contato)\.html$ %1%2.php [R=302,L]
+RewriteCond %{REQUEST_URI} ^(.*/)?processo\.html$
+RewriteRule ^processo\.html$ %1habilidades.php [R=302,L]

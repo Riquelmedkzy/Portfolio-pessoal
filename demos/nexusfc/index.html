@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Protótipo visual da nova Home do portal acadêmico Notícias de Futebol.">
+    <meta name="theme-color" content="#080B0D">
+    <title>Home — Protótipo | Notícias de Futebol</title>
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+    <script src="js/prototype.js"></script>
+    <link rel="stylesheet" href="css/prototype.css">
+<link rel="stylesheet" href="../demo-note.css"></head>
+<body><aside class="portfolio-demo-note"><a href="../../projeto.php?slug=nexusfc">← Voltar ao portfólio</a> · Protótipo visual original. Notícias ilustrativas; recursos do portal completo não estão ativos nesta cópia.</aside>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="site-header">
+        <div class="header-shell">
+            <a class="brand" href="#inicio" aria-label="Notícias de Futebol — início">
+                <svg class="brand-mark" width="38" height="38" viewBox="0 0 44 44" fill="none" aria-hidden="true">
+                    <rect x="2" y="2" width="40" height="40" rx="5" stroke="currentColor" stroke-width="2"/>
+                    <path d="M22 2v40M2 13h9v18H2m40-18h-9v18h9" stroke="currentColor" stroke-width="2"/>
+                    <circle cx="22" cy="22" r="7" stroke="currentColor" stroke-width="2"/>
+                </svg>
+                <span class="brand-copy"><strong>Notícias</strong><small>de Futebol</small></span>
+            </a>
+
+            <nav class="desktop-nav" aria-label="Navegação principal">
+                <a class="is-active" href="#inicio" aria-current="page">Início</a>
+                <a href="#ultimas">Notícias</a>
+                <a href="#analises">Análises</a>
+                <a href="#campeonatos">Campeonatos</a>
+                <a href="#equipes">Equipes</a>
+            </nav>
+
+            <div class="header-actions">
+                <p>Busca disponível na aplicação completa.</p>
+                <a class="login-link" href="app-info.html">Entrar</a>
+                <a class="account-button" href="app-info.html">Criar conta</a>
+                <button class="theme-toggle" type="button" aria-label="Ativar tema claro" title="Ativar tema claro">
+                    <svg class="theme-icon theme-icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <circle cx="12" cy="12" r="3.75" stroke="currentColor" stroke-width="1.8"/>
+                        <path d="M12 2v2.2M12 19.8V22M4.93 4.93l1.56 1.56m11.02 11.02 1.56 1.56M2 12h2.2M19.8 12H22M4.93 19.07l1.56-1.56M17.51 6.49l1.56-1.56" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                    </svg>
+                    <svg class="theme-icon theme-icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M20 15.3A8.5 8.5 0 0 1 8.7 4a8.5 8.5 0 1 0 11.3 11.3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu" hidden>
+                    <svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                    </svg>
+                    <span>Menu</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="mobile-menu" id="mobile-menu">
+            <nav aria-label="Navegação móvel">
+                <a class="is-active" href="#inicio" aria-current="page">Início</a>
+                <a href="#ultimas">Notícias</a>
+                <a href="#analises">Análises</a>
+                <a href="#campeonatos">Campeonatos</a>
+                <a href="#equipes">Equipes</a>
+            </nav>
+            <p>Busca disponível na aplicação completa.</p>
+            <div class="mobile-account">
+                <a href="app-info.html">Entrar</a>
+                <a href="app-info.html">Criar conta</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="conteudo">
+        <section class="hero-section page-shell" id="inicio" aria-labelledby="hero-title">
+            <div class="edition-line">
+                <p>Portal acadêmico de jornalismo esportivo</p>
+                <p><span>Segunda-feira</span> · 14 de setembro de 2026</p>
+            </div>
+
+            <div class="hero-grid">
+                <article class="hero-story">
+                    <img src="img/estadio.jpg" alt="Estádio de futebol lotado visto das arquibancadas" width="1600" height="1067" fetchpriority="high">
+                    <div class="hero-overlay"></div>
+                    <div class="hero-content">
+                        <a class="category-tag" href="app-info.html">Análises</a>
+                        <h1 id="hero-title"><a href="app-info.html">Como a ocupação dos espaços transforma uma partida</a></h1>
+                        <p class="hero-summary">Uma leitura didática sobre amplitude, profundidade e decisões coletivas.</p>
+                        <div class="hero-footer">
+                            <p class="story-meta"><strong>Marina Costa</strong><span>11 set 2026</span></p>
+                            <a class="read-button" href="app-info.html">
+                                Ler notícia
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <div class="hero-secondary" aria-label="Outros destaques">
+                    <article class="story-card story-card-medium">
+                        <a class="story-image" href="app-info.html" tabindex="-1" aria-hidden="true">
+                            <img src="img/bola.jpg" alt="" width="1200" height="800">
+                        </a>
+                        <div class="story-body">
+                            <a class="category-link" href="app-info.html">Bastidores</a>
+                            <h2><a href="app-info.html">A preparação começa muito antes de a bola rolar</a></h2>
+                            <p>Planejamento organiza treino, descanso e comunicação do elenco.</p>
+                            <p class="story-meta"><strong>Rafael Lima</strong><span>10 set 2026</span></p>
+                        </div>
+                    </article>
+
+                    <article class="story-card story-card-compact">
+                        <a class="story-image" href="app-info.html" tabindex="-1" aria-hidden="true">
+                            <img src="img/gramado.jpg" alt="" width="1200" height="800">
+                        </a>
+                        <div class="story-body">
+                            <a class="category-link" href="app-info.html">Categorias de base</a>
+                            <h2><a href="app-info.html">Formação de atletas une técnica e responsabilidade</a></h2>
+                            <p class="story-meta"><strong>Marina Costa</strong><span>09 set 2026</span></p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <nav class="competition-rail" id="campeonatos" aria-label="Navegar por campeonato">
+            <div class="page-shell competition-inner">
+                <div class="rail-heading">
+                    <span class="rail-icon" aria-hidden="true"></span>
+                    <strong>Em disputa</strong>
+                </div>
+                <a href="app-info.html"><span>Copa Regional</span><small>2026</small></a>
+                <a href="app-info.html"><span>Liga Acadêmica</span><small>2026</small></a>
+                <a href="app-info.html"><span>Torneio das Comunidades</span><small>2026</small></a>
+                <a class="rail-all" href="app-info.html">Ver cobertura</a>
+            </div>
+        </nav>
+
+        <section class="latest-section page-shell" id="ultimas" aria-labelledby="latest-title">
+            <div class="section-heading">
+                <div>
+                    <h2 id="latest-title">Últimas notícias</h2>
+                </div>
+                <a class="section-link" href="app-info.html">Todas as notícias
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+            </div>
+
+            <div class="latest-layout">
+                <div class="news-list">
+                    <article class="horizontal-story" id="analises">
+                        <a class="horizontal-image" href="app-info.html" tabindex="-1" aria-hidden="true"><img src="img/jogo.jpg" alt="" width="1200" height="800" loading="lazy"></a>
+                        <div>
+                            <a class="category-link" href="app-info.html">Campeonatos</a>
+                            <h3><a href="app-info.html">O regulamento também faz parte da estratégia</a></h3>
+                            <p class="story-deck">Formato da competição influencia planejamento e uso do elenco.</p>
+                            <p class="story-meta"><strong>Rafael Lima</strong><span>08 set 2026</span></p>
+                        </div>
+                    </article>
+
+                    <article class="horizontal-story">
+                        <a class="horizontal-image" href="app-info.html" tabindex="-1" aria-hidden="true"><img src="img/estadio.jpg" alt="" width="1200" height="800" loading="lazy"></a>
+                        <div>
+                            <a class="category-link" href="app-info.html">Torcida</a>
+                            <h3><a href="app-info.html">A arquibancada como lugar de encontro</a></h3>
+                            <p class="story-deck">Futebol aproxima gerações e guarda memórias de uma comunidade.</p>
+                            <p class="story-meta"><strong>Marina Costa</strong><span>07 set 2026</span></p>
+                        </div>
+                    </article>
+
+                    <article class="horizontal-story">
+                        <a class="horizontal-image" href="app-info.html" tabindex="-1" aria-hidden="true"><img src="img/bola.jpg" alt="" width="1200" height="800" loading="lazy"></a>
+                        <div>
+                            <a class="category-link" href="app-info.html">Análises</a>
+                            <h3><a href="app-info.html">Bola parada pede detalhe e repetição</a></h3>
+                            <p class="story-deck">Posicionamento e leitura do lance podem criar boas oportunidades.</p>
+                            <p class="story-meta"><strong>Rafael Lima</strong><span>06 set 2026</span></p>
+                        </div>
+                    </article>
+
+                    <article class="horizontal-story">
+                        <a class="horizontal-image" href="app-info.html" tabindex="-1" aria-hidden="true"><img src="img/jogo.jpg" alt="" width="1200" height="800" loading="lazy"></a>
+                        <div>
+                            <a class="category-link" href="app-info.html">Bastidores</a>
+                            <h3><a href="app-info.html">Comunicação clara fortalece o trabalho coletivo</a></h3>
+                            <p class="story-deck">Orientações objetivas ajudam jogadores a interpretar cada momento.</p>
+                            <p class="story-meta"><strong>Marina Costa</strong><span>05 set 2026</span></p>
+                        </div>
+                    </article>
+                </div>
+
+                <aside class="editorial-sidebar" aria-label="Explore o portal">
+                    <section class="sidebar-block">
+                        <div class="sidebar-heading"><h2>Por assunto</h2></div>
+                        <nav class="topic-list" aria-label="Categorias">
+                            <a href="app-info.html"><span>Análises</span><small>Leitura tática</small></a>
+                            <a href="app-info.html"><span>Bastidores</span><small>Rotina dos clubes</small></a>
+                            <a href="app-info.html"><span>Categorias de base</span><small>Formação</small></a>
+                            <a href="app-info.html"><span>Torcida</span><small>Histórias</small></a>
+                        </nav>
+                    </section>
+
+                    <section class="community-callout">
+                        <h2>O jogo continua na conversa.</h2>
+                        <p>Crie sua conta para comentar as matérias e participar do portal.</p>
+                        <a href="app-info.html">Faça parte
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                        <div class="pitch-lines" aria-hidden="true"><span></span></div>
+                    </section>
+                </aside>
+            </div>
+        </section>
+
+        <section class="teams-section" id="equipes" aria-labelledby="teams-title">
+            <div class="page-shell teams-layout">
+                <div class="teams-intro">
+                    <h2 id="teams-title">Acompanhe as histórias de cada equipe.</h2>
+                    <p>Os clubes demonstrativos organizam as relações entre notícias, cidades e campeonatos sem criar uma área de partidas.</p>
+                </div>
+                <nav class="team-list" aria-label="Notícias por equipe">
+                    <a href="app-info.html"><span class="team-badge">A</span><span><strong>Aurora Futebol Clube</strong><small>Vale Verde</small></span></a>
+                    <a href="app-info.html"><span class="team-badge">U</span><span><strong>União Esportiva Central</strong><small>Santa Marina</small></span></a>
+                    <a href="app-info.html"><span class="team-badge">L</span><span><strong>Atlético do Litoral</strong><small>Porto Azul</small></span></a>
+                    <a href="app-info.html"><span class="team-badge">E</span><span><strong>Estrela da Serra</strong><small>Serra Clara</small></span></a>
+                </nav>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="page-shell footer-main">
+            <div class="footer-brand-block">
+                <a class="brand footer-brand" href="#inicio" aria-label="Notícias de Futebol — voltar ao início">
+                    <svg class="brand-mark" width="38" height="38" viewBox="0 0 44 44" fill="none" aria-hidden="true"><rect x="2" y="2" width="40" height="40" rx="5" stroke="currentColor" stroke-width="2"/><path d="M22 2v40M2 13h9v18H2m40-18h-9v18h9" stroke="currentColor" stroke-width="2"/><circle cx="22" cy="22" r="7" stroke="currentColor" stroke-width="2"/></svg>
+                    <span class="brand-copy"><strong>Notícias</strong><small>de Futebol</small></span>
+                </a>
+                <p>Futebol dentro e fora de campo.</p>
+            </div>
+            <div class="footer-column"><h2>Portal</h2><a href="#inicio">Início</a><a href="#ultimas">Últimas notícias</a><a href="#campeonatos">Campeonatos</a><a href="#equipes">Equipes</a></div>
+            <div class="footer-column"><h2>Conta</h2><a href="app-info.html">Entrar</a><a href="app-info.html">Criar conta</a></div>
+            <div class="footer-note"><strong>Projeto acadêmico</strong><p>Conteúdos e equipes fictícios, criados para demonstrar o sistema.</p></div>
+        </div>
+        <div class="page-shell footer-bottom"><p>© 2026 Notícias de Futebol</p><p>Projeto Final de Técnico em Informática</p></div>
+    </footer>
+</body>
+</html>
