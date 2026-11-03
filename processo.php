@@ -1,3 +1,3 @@
 <?php
-header('Location: ./habilidades.php', true, 301);
+header('Location: ./habilidades.html', true, 302);
 exit;

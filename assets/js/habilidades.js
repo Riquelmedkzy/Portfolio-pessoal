@@ -58,7 +58,7 @@ function drawScene(state) {
 }
 
 function canAnimate() {
-  return !document.hidden && !reducedMotion.matches;
+  return !document.hidden && !reducedMotion.matches && !main?.classList.contains('motion-paused');
 }
 
 function updateScenePlayback() {
@@ -199,6 +199,7 @@ if (main && 'IntersectionObserver' in window) {
 
   setMotionObservers();
   document.addEventListener('visibilitychange', updateScenePlayback);
+  document.addEventListener('portfolio-motion', updateScenePlayback);
   reducedMotion.addEventListener('change', () => {
     if (reducedMotion.matches) {
       stopMotionObservers();

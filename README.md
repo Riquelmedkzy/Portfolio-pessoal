@@ -1,88 +1,68 @@
-# Portfólio de Riquelme
+# Riquelme — Código, forma e intenção
 
-Código em `/home/user/Portfólio Pessoal`. A pasta `/home/user/Documentos/ChatGPT/Portfólio Pessoal` estava vazia e não foi usada.
+Portfólio editorial com temas claro e escuro, foco em projetos freelance, sete projetos e contato por email. Retrato original e fontes DM Sans / DM Serif Display preservados.
 
-PHP 8.0+ (verificado com PHP 8.2.12 do XAMPP), PDO/pdo_mysql, MySQL ou MariaDB, HTML, CSS e JavaScript. Sem Composer, npm, framework, login ou painel. A animação de Habilidades usa uma cópia local, versionada e licenciada do Motion One. As fontes existentes continuam carregadas do Google Fonts; há fontes de fallback no CSS.
+## Ver no XAMPP agora
 
-## Executar agora por HTTP com o PHP do XAMPP
+1. Copie a pasta inteira para `C:\xampp\htdocs\Portfolio-pessoal` (Windows) ou `/opt/lampp/htdocs/Portfolio-pessoal` (Linux).
+2. Inicie **Apache**. MySQL não é necessário para o portfólio.
+3. Abra `http://localhost/Portfolio-pessoal/index.html`.
 
-```bash
-cd '/home/user/Portfólio Pessoal'
-/opt/lampp/bin/php -S 127.0.0.1:8765 router.php
+As páginas HTML já estão geradas e funcionam sem instalar Node. Os antigos endereços PHP redirecionam para as novas páginas. Não abra por `file://`: módulos JavaScript precisam de HTTP.
+
+## Editar e atualizar
+
+Requer Node.js 22+ apenas para gerar novamente as páginas:
+
+```sh
+npm ci
+npm run build
+npm test
 ```
 
-Abra `http://127.0.0.1:8765/`. Não abra os arquivos por `file://`. O servidor PHP usa `router.php` para bloquear arquivos internos. O catálogo responde 503 até configurar/importar o banco; não usa projetos fictícios como fallback. As outras páginas e cópias de demonstração funcionam sem banco.
+- `content/projects.json`: fonte única do catálogo, validada com Zod. Slugs devem ser únicos; URLs externas HTTPS; caminhos de imagens/demos limitados a pastas públicas.
+- `scripts/build.mjs`: templates das páginas, conteúdo pessoal, habilidades e geração de SEO.
+- `styles.css`: direção editorial e temas.
+- `assets/css/skills.css`, `assets/css/skills-theme.css`, `assets/js/habilidades.js`: movimentos e visual de Habilidades.
+- As páginas na raiz são geradas. Edite os templates/dados e rode o build; edições diretas nos HTML serão substituídas.
+- `dist/`: saída pública para Vercel. Gerada por allowlist, sem PHP, credenciais, SQL ou código de build.
 
-## Banco: configuração e importação MANUAIS
+Após mudanças, rode `npm run build` e atualize o navegador do XAMPP. Para prévia sem XAMPP, `python -m http.server 8765` é útil em desenvolvimento, mas serve arquivos-fonte: não exponha esse servidor à internet. Alternativamente use `php -S 127.0.0.1:8765 router.php`.
 
-Nenhum banco existente foi importado, alterado ou sobrescrito durante a implementação.
+## Banco e migração
 
-1. Inicie MySQL/MariaDB e Apache pelo painel XAMPP. No Linux, também é possível usar `sudo /opt/lampp/lampp start`.
-2. Abra `http://localhost/phpmyadmin`. Crie um banco **novo e vazio**, por exemplo `portfolio_riquelme`, com `utf8mb4_unicode_ci`. Se esse nome já existir, escolha outro. Não selecione um banco de outro projeto.
-3. Selecione o banco novo e importe `database/schema.sql` **uma única vez**. O arquivo cria `portfolio_projects` e sete registros baseados nos projetos encontrados. Se a tabela já existir, interrompa a importação e revise o banco selecionado; não reimporte.
-4. No phpMyAdmin, crie um usuário local para a aplicação e conceda apenas `SELECT` no banco do portfólio. Escolha sua própria senha.
-5. Copie `config/database.example.php` para `config/local.php`. Preencha host, porta, banco, usuário e senha. O exemplo não contém senha real. O arquivo local está no `.gitignore` e tem acesso HTTP bloqueado. Preferencialmente guarde a configuração fora da pasta servida e defina a variável `PORTFOLIO_CONFIG` com seu caminho absoluto.
-6. Reabra `projetos.php`. Cada botão abre uma página real `projeto.php?slug=...`; demos disponíveis passam por `demo.php?slug=...`.
+O catálogo foi reconstruído em JSON, aproveitando a aceitação de edição pelo GitHub. O portfólio **não consulta mais MySQL**. Isso elimina a dependência de configuração local que bloqueava projetos e demos. Não foi criada uma nova instalação MySQL nem apagado qualquer banco existente.
 
-Em produção, `PORTFOLIO_CONFIG` deve apontar para um arquivo PHP fora do document root que retorne o mesmo array do exemplo; a variável guarda o caminho, não as credenciais. Defina-a no ambiente do processo PHP/Apache e permita leitura somente ao runtime PHP e a administradores. Use usuário MySQL/MariaDB com privilégio mínimo e restrinja conexões ao host da aplicação pela rede privada. O navegador recebe apenas páginas HTTP: configuração e porta do banco permanecem no servidor.
+`database/schema.sql`, `config/` e `app/` preservam o material anterior como referência, não são usados pelas páginas novas e não entram em `dist`. Não importe o SQL antigo para tentar ativar este portfólio.
 
-A aplicação só lê o catálogo. Para atualizar os dados, use o phpMyAdmin. Textos vindos do banco são escapados; parâmetros de rota são validados e passados em consultas preparadas. `demo_key` aceita somente as demonstrações definidas no código, nunca um caminho arbitrário.
+Os bancos dos projetos Aranhaverso e NexusFC são independentes: a mudança do catálogo não instala nem corrige esses sistemas. NexusFC e Hogwarts têm demos estáticas; o Aranhaverso leva ao repositório com instruções de instalação. ListaTarefas leva à distribuição beta, com código-fonte privado.
 
-## Servir a mesma pasta pelo Apache do XAMPP
+## Vercel (preparado, ainda não publicado)
 
-Para manter uma única cópia do projeto, configure um Alias no Apache (`/opt/lampp/etc/httpd.conf` ou arquivo incluído por ele):
+Importe o repositório como projeto **Other**, build `npm run build`, saída `dist`. `vercel.json` contém a configuração e os cabeçalhos.
 
-```apache
-Alias /portfolio "/home/user/Portfólio Pessoal"
-<Directory "/home/user/Portfólio Pessoal">
-    Options -Indexes +FollowSymLinks
-    AllowOverride All
-    Require all granted
-    DirectoryIndex index.php
-</Directory>
-```
+Na produção, defina `SITE_URL` com a origem HTTPS definitiva (exemplo de formato: `https://seu-dominio.com`, sem caminhos). Se omitida, o build de produção tenta usar `VERCEL_PROJECT_PRODUCTION_URL`. Após definir ou mudar o domínio, faça novo deploy.
 
-O usuário do Apache (`daemon` nesta instalação) precisa atravessar `/home/user` e ler a pasta do projeto. Configure permissões/ACL somente nos caminhos necessários, sem usar `chmod 777`. Não publique a configuração secreta em outro diretório público. A configuração do Apache não foi editada automaticamente. Reinicie o Apache após a configuração e acesse `http://localhost/portfolio/`. Em Windows, ajuste o caminho do Alias para a pasta real do projeto.
+Com URL de produção, o build gera canonical, Open Graph, `sitemap.xml` e robots. Sem URL, a saída é uma **prévia noindex**, com robots bloqueando rastreamento. Não publique esperando indexação antes de configurar a URL. Não há domínio fictício embutido. Preview deployments devem permanecer sem SITE_URL de produção.
 
-O `.htaccess` bloqueia app/config/database/docs/logs, arquivos ocultos e extensões internas (`.log`, `.sql`, `.bak`, `.ini`), desativa listagem e redireciona os antigos endereços `.html` para `.php` sem perder o prefixo do Alias. As regras dependem de `mod_rewrite` e de `AllowOverride` para `FileInfo`, `Indexes`, `Options` e `AuthConfig` (o exemplo usa `AllowOverride All`). Não depende de URLs amigáveis para abrir as páginas principais.
+Os antigos `.php` redirecionam. `projeto.php?slug=...` e `demo.php?slug=...` levam à página correspondente via ponte estática; a ponte oferece o catálogo caso JavaScript esteja desativado.
 
-## Projetos e demonstrações
+Depois do deploy: conferir links, headers, indexação permitida, sitemap e canonical no domínio real. Search Console depende da conta e domínio; nenhum cadastro foi feito. SEO não garante tráfego ou posições.
 
-| Registro | Fonte inspecionada | Disponibilidade |
-| --- | --- | --- |
-| Hogwarts | `/opt/lampp/htdocs/2350/projhogwarts1.0/projhogwarts_html` | Cópia HTML com cinco páginas, CSS e assets em `demos/hogwarts`. |
-| NexusFC | `/opt/lampp/htdocs/2350/Projeto final` | Cópia do protótipo existente em `demos/nexusfc`. O portal PHP completo não foi instalado. |
-| ListaTarefas | `/home/user/Projetos/ListaTarefas` | Código Android/Expo; precisa de APK aprovado ou build web funcional. |
-| Sexta-Feira | `/home/user/Projetos/Sexta-Feira` | Aplicação local de terminal/voz; precisa de demonstração pública ou gravação aprovada. |
-| Aranhaverso | `/opt/lampp/htdocs/2350/projaranhaverso` | Código e schema encontrados; falta ambiente de demonstração configurado e URL validada. |
-| Ciberfólio | `/opt/lampp/htdocs/2350/Ciberfólio` | Código encontrado; falta ambiente de demonstração configurado e URL validada. |
-| Gestão de compras | `/opt/lampp/htdocs/2350/projcompras` e `projcompras2` | Código/documentação encontrados; falta ambiente de demonstração configurado e URL validada. |
+## Segurança e limites
 
-As cópias integradas contêm apenas assets públicos necessários; nenhum banco, credencial, conta, upload pessoal ou arquivo de log dos projetos foi copiado. Os originais não foram editados. Versões duplicadas e a estrutura incompleta `projmvc` não viraram registros adicionais.
+- Sem formulário servidor, login, sessão ou coleta de dados. Email usa `mailto:` e opção copiar; isso não envia uma mensagem automaticamente.
+- Preferência de tema fica no armazenamento local. Sem analytics ou cookies de rastreamento adicionados.
+- CSP limita scripts à própria origem; estilos inline são permitidos para compatibilidade com animações e demos. Google Fonts permanece externo, como no original.
+- `.htaccess` protege fontes no Apache e define headers quando `mod_headers` está ativo. Requer AllowOverride apropriado; conferir no seu XAMPP.
+- `dist` é a única saída que deve ser publicada. Não publique a raiz como um servidor estático genérico.
 
-No Hogwarts, foram corrigidos caminhos absolutos e a capitalização de uma imagem somente na cópia. O botão de trailer original sem ação foi substituído por um aviso. No protótipo NexusFC, links que dependiam do backend vão a uma página explicativa real; a busca não funcional foi substituída por texto. A interface informa que são notícias ilustrativas do protótipo existente.
+## Evidências desta revisão
 
-## Imagens e conteúdo
+Build, validação do catálogo e testes Node executados. Navegador Chromium: oito páginas principais em 390 e 1440 px, claro e escuro; sem erro JavaScript, imagem quebrada ou overflow horizontal nas condições verificadas. Alternância/persistência de tema, menu/Escape e pausa de movimento conferidos.
 
-- `1000620950.jpg`: retrato JPEG original do hero, intacto. SHA256: `f34f2be673d6b41fb14ce013e9689ce7c747dd22e808ab19b549eec0ba038c7c`.
-- `portrait-mask.svg`: máscara CSS separada da foto, sem retoque do rosto; conferida visualmente na hero em desktop e celular.
-- `1000620945.jpg`, `1000620946.jpg`, `1000620947.jpg`: referências preservadas; não exibidas como conteúdo do site.
-- `/home/user/Imagens/img5.png`, `img6.png`, `img7.png`: capturas inspecionadas para esta revisão, não copiadas para o site.
-- Nome atualizado para Riquelme. Apresentação pessoal e contato continuam aguardando texto real, sem email ou trajetória inventados. A página Habilidades apresenta somente as tecnologias documentadas nos projetos do catálogo; confirme se essa lista representa o que deseja destacar.
+XAMPP/Apache e PHP não estão disponíveis no ambiente de trabalho; wrappers PHP e `.htaccess` foram inspecionados, não executados. Hospedagem Vercel não publicada nem verificada. Core Web Vitals de usuários e Lighthouse não medidos.
 
-## Verificação e limites
+## Origem do conteúdo
 
-`php -l` passou em todos os arquivos PHP. O XAMPP fornece PHP 8.2.12, `PDO` e `pdo_mysql`. Rotas, assets, redirects antigos e bloqueio de arquivos internos foram verificados pelo servidor de desenvolvimento e em Apache 2.4.58 isolado, com configurações temporárias de Alias e DocumentRoot; a configuração real de hospedagem não foi alterada. O teste do Apache confirmou o MIME `image/jpeg` do retrato. O escaneamento local de referências das demos conferiu 194 caminhos e não encontrou arquivos ausentes.
-
-O catálogo não foi importado nem testado com dados reais: `config/local.php` não existe, `PORTFOLIO_CONFIG` não está definido e MySQL/MariaDB não está em execução. `projetos.php` e `demo.php` retornam 503 nesse estado; após configurar o banco, valide o catálogo e o fluxo de detalhes/demonstração. Nenhum schema ou registro foi alterado.
-
-A revisão visual foi feita no navegador em desktop e celular. A home permaneceu sem rolagem horizontal ou vertical, inclusive durante a entrada do retrato, nas larguras de 320 a 1440 px testadas; Habilidades não teve rolagem horizontal de 320 a 1280 px. Menu móvel, Escape e foco visível por teclado foram verificados. O ambiente não permitiu emular `prefers-reduced-motion` nem desligar JavaScript; CSS/JS foram inspecionados para essas situações, incluindo conteúdo renderizado pelo PHP sem ocultação por JavaScript.
-
-A pasta `.git` está vazia, então o estado versionado não pode ser confirmado. `config/local.php`, arquivos `.env` e logs não estão presentes; `.gitignore`, regras HTTP para arquivos internos e ausência de atribuições com formato de segredo foram conferidos sem revelar valores.
-
-## Documentação oficial consultada
-
-- [Apache `.htaccess` no 2.4](https://httpd.apache.org/docs/2.4/howto/htaccess.html.en) e [mod_rewrite](https://httpd.apache.org/docs/2.4/mod/mod_rewrite.html)
-- [Driver PDO_MYSQL](https://www.php.net/manual/en/ref.pdo-mysql.php), [prepared statements](https://www.php.net/manual/en/pdo.prepare.php) e [escape de HTML](https://www.php.net/manual/en/function.htmlspecialchars.php)
-- [Motion One `inView`](https://motion.dev/docs/inview) e [repositório oficial](https://github.com/motiondivision/motionone); a cópia local 10.18.0 inclui sua licença MIT.
-- [XAMPP no Linux](https://www.apachefriends.org/faq_linux.html)
+Informações pessoais e papéis nos três projetos principais confirmados por Riquelme. Consulte `docs/fontes.md`. Os quatro projetos complementares mantêm apenas o conteúdo do catálogo original; não foram inventados clientes, métricas ou depoimentos.
