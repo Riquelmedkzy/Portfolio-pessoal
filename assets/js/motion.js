@@ -42,7 +42,7 @@
   });
   reduced.addEventListener('change', update);
   update();
-  document.querySelectorAll('.title-line').forEach((line, i) => enter(line, i * 130, true));
+  document.querySelectorAll('body:not(.home-page) .title-line').forEach((line, i) => enter(line, i * 130, true));
   const revealTargets = document.querySelectorAll('.section-heading,.project-item,.services>h2,.service-list article,.working>h2,.working li,.contact-strip,.case-body section,.about-layout>div,.contact-note,.page-heading');
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver(entries => {

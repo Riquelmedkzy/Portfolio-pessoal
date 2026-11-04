@@ -77,3 +77,6 @@ O retrato agora usa PNG com transparência em ambos os temas. As capas de Aranha
 Home independente em index.html; catálogo, sobre, habilidades, contato e detalhes em URLs próprias. Tema escuro inicial e tema claro opcional. SpotlightCard do React Bits adaptado em JavaScript para preservar a arquitetura estática; referência: https://reactbits.dev/components/spotlight-card e licença em docs/react-bits-LICENSE.txt. Pausa e movimento reduzido desativam o efeito.
 Publicação exige build npm run build e saída dist, nunca a raiz com PHP. Verificação Google preservada no build. Para XAMPP, copie o conteúdo de dist para /opt/lampp/htdocs/Portfolio-pessoal e abra http://localhost/Portfolio-pessoal/.
 Validação desta alteração: build e quatro testes Node aprovados. Revisão visual automatizada pendente por indisponibilidade do Chromium no ambiente; não assumir que a verificação da versão anterior se aplica a este redesign.
+
+## Ajustes de apresentação
+Home contém apenas hero com entrada sequenciada (texto, retrato e ações); serviços e processo em servicos.html. Capas com altura uniforme e ícones coloridos. Canonical e sitemap usam https://matheus-riquelme-web.vercel.app. O endereço anterior redireciona preservando caminhos. Search Console: adicionar a nova propriedade por prefixo de URL e enviar sitemap.xml; arquivo de verificação preservado. Indexação não é garantida.
