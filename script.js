@@ -1,65 +1,17 @@
-document.documentElement.classList.add('js-enabled');
-
-const legacyRoutes = {
-  '#sobre': './sobre.php',
-  '#projetos': './projetos.php',
-  '#processo': './habilidades.php',
-  '#habilidades': './habilidades.php',
-  '#contato': './contato.php',
-};
-
-function redirectLegacyHash() {
-  const route = legacyRoutes[window.location.hash];
-  if (document.body.dataset.page === 'inicio' && route) window.location.replace(route);
-}
-
-redirectLegacyHash();
-window.addEventListener('pageshow', redirectLegacyHash);
-window.addEventListener('hashchange', redirectLegacyHash);
-
-const menuButton = document.querySelector('.menu-toggle');
-const navigation = document.querySelector('.site-nav');
-
-function closeMenu() {
-  menuButton.setAttribute('aria-expanded', 'false');
-  menuButton.setAttribute('aria-label', 'Abrir menu');
-  navigation.classList.remove('is-open');
-}
-
-menuButton.addEventListener('click', () => {
-  const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
-  menuButton.setAttribute('aria-expanded', String(!isOpen));
-  menuButton.setAttribute('aria-label', isOpen ? 'Abrir menu' : 'Fechar menu');
-  navigation.classList.toggle('is-open', !isOpen);
-});
-
-navigation.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
-document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape' && navigation.classList.contains('is-open')) {
-    closeMenu();
-    menuButton.focus();
-  }
-});
-
-window.matchMedia('(max-width: 700px)').addEventListener('change', (event) => {
-  if (!event.matches) closeMenu();
-});
-
-const year = document.querySelector('#year');
-if (year) year.textContent = new Date().getFullYear();
-
-const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-const reveals = [...document.querySelectorAll('.reveal')];
-
-if ('IntersectionObserver' in window && !reducedMotion.matches && reveals.length) {
-  document.documentElement.classList.add('js-motion');
-  const revealObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.08, rootMargin: '0px 0px -20px 0px' });
-  reveals.forEach((element) => revealObserver.observe(element));
-}
+const root = document.documentElement;
+const media = matchMedia('(prefers-color-scheme: dark)');
+const dark = () => root.dataset.theme ? root.dataset.theme === 'dark' : media.matches;
+const theme = document.querySelector('[data-theme-toggle]');
+function labelTheme() { if(theme) {theme.textContent = dark() ? 'Tema claro' : 'Tema escuro'; theme.setAttribute('aria-label', 'Ativar ' + theme.textContent.toLowerCase());} }
+labelTheme(); media.addEventListener('change',labelTheme);
+theme?.addEventListener('click',()=>{root.dataset.theme = dark() ? 'light' : 'dark';try {localStorage.setItem('portfolio-theme',root.dataset.theme);}catch{} labelTheme();});
+const menu = document.querySelector('[data-menu]'), nav = document.querySelector('#navigation');
+function closeMenu(){menu?.setAttribute('aria-expanded','false');nav?.classList.remove('open');}
+menu?.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));nav.classList.toggle('open',open);});
+nav?.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav?.classList.contains('open')){closeMenu();menu.focus();}});
+matchMedia('(min-width: 801px)').addEventListener('change',closeMenu);
+const copy=document.querySelector('[data-copy-email]');
+copy?.addEventListener('click',async()=>{const status=document.querySelector('[data-copy-status]');try{await navigator.clipboard.writeText('matheusriquelmeweb@gmail.com');status.textContent='Email copiado.';}catch{status.textContent='Selecione e copie o email exibido acima.';}});
+const pause=document.querySelector('[data-pause-motion]');
+pause?.addEventListener('click',()=>{const paused=pause.getAttribute('aria-pressed')!=='true';pause.setAttribute('aria-pressed',String(paused));pause.textContent=paused?'Retomar animações':'Pausar animações';document.querySelector('.skills-main')?.classList.toggle('motion-paused',paused);document.dispatchEvent(new CustomEvent('portfolio-motion',{detail:{paused}}));});
