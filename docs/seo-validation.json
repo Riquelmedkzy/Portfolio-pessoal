@@ -1,0 +1,427 @@
+{
+  "performance": {
+    "production": {
+      "url": "https://matheus-riquelme-web.vercel.app/",
+      "lighthouseVersion": "13.6.0",
+      "device": "mobile",
+      "throttling": "simulate",
+      "scores": {
+        "performance": 0.87,
+        "accessibility": 1,
+        "seo": 1
+      },
+      "metrics": {
+        "first-contentful-paint": {
+          "value": 1628.246,
+          "display": "1.6 s"
+        },
+        "largest-contentful-paint": {
+          "value": 2540.535,
+          "display": "2.5 s"
+        },
+        "total-blocking-time": {
+          "value": 391.9999999999998,
+          "display": "390 ms"
+        },
+        "cumulative-layout-shift": {
+          "value": 9.868861394414644e-06,
+          "display": "0"
+        }
+      }
+    },
+    "local_serial": {
+      "url": "http://127.0.0.1:8766/",
+      "lighthouseVersion": "13.6.0",
+      "device": "mobile",
+      "throttling": "simulate",
+      "scores": {
+        "performance": 0.84,
+        "accessibility": 1,
+        "seo": 1
+      },
+      "metrics": {
+        "first-contentful-paint": {
+          "value": 1444.32085,
+          "display": "1.4 s"
+        },
+        "largest-contentful-paint": {
+          "value": 2362.3038500000002,
+          "display": "2.4 s"
+        },
+        "total-blocking-time": {
+          "value": 529.7707,
+          "display": "530 ms"
+        },
+        "cumulative-layout-shift": {
+          "value": 1.0721725959364057e-05,
+          "display": "0"
+        }
+      }
+    }
+  },
+  "browser": [
+    {
+      "device": "mobile",
+      "path": "/",
+      "title": "Desenvolvedor web no Rio de Janeiro — Matheus Riquelme",
+      "description": "Matheus Riquelme, desenvolvedor web freelancer. Criação de sites, landing pages e sistemas web com atendimento online para projetos no Rio de Janeiro.",
+      "h1": 1,
+      "overflow": false,
+      "schema": 1,
+      "image": "http://127.0.0.1:8766/assets/images/portrait-640.webp",
+      "errors": []
+    },
+    {
+      "device": "mobile",
+      "path": "/servicos.html",
+      "title": "Criação de sites no Rio de Janeiro — Matheus Riquelme",
+      "description": "Criação de sites institucionais, landing pages, lojas virtuais e sistemas web. Conheça os serviços de Matheus Riquelme e converse sobre seu projeto no RJ.",
+      "h1": 1,
+      "overflow": false,
+      "schema": 1,
+      "errors": []
+    },
+    {
+      "device": "mobile",
+      "path": "/projetos.html",
+      "title": "Projetos de desenvolvimento web e aplicativos — Matheus Riquelme",
+      "description": "Conheça os projetos de Riquelme: Aranhaverso, ListaTarefas, NexusFC e outros estudos de desenvolvimento.",
+      "h1": 1,
+      "overflow": false,
+      "schema": 1,
+      "errors": []
+    },
+    {
+      "device": "mobile",
+      "path": "/aranhaverso.html",
+      "title": "Aranhaverso: site interativo em PHP — Matheus Riquelme",
+      "description": "Conheça o Aranhaverso, projeto pessoal de Matheus Riquelme com animações, páginas de filmes e desenvolvimento web em PHP, CSS e JavaScript.",
+      "h1": 1,
+      "overflow": false,
+      "schema": 1,
+      "errors": []
+    },
+    {
+      "device": "mobile",
+      "path": "/lista-tarefas.html",
+      "title": "ListaTarefas: aplicativo Android — Matheus Riquelme",
+      "description": "Conheça o ListaTarefas, aplicativo pessoal de organização para Android criado por Matheus Riquelme com React Native, Expo e TypeScript. Versão beta.",
+      "h1": 1,
+      "overflow": false,
+      "schema": 1,
+      "errors": []
+    },
+    {
+      "device": "mobile",
+      "path": "/nexusfc.html",
+      "title": "NexusFC: portal de notícias em PHP — Matheus Riquelme",
+      "description": "Conheça o NexusFC, portal de notícias de futebol desenvolvido no TCC. Desenvolvimento full stack em PHP e MySQL, com demonstração visual.",
+      "h1": 1,
+      "overflow": false,
+      "schema": 1,
+      "errors": []
+    },
+    {
+      "device": "mobile",
+      "path": "/hogwarts.html",
+      "title": "Hogwarts: estudo de site temático — Matheus Riquelme",
+      "description": "Explore o estudo web Hogwarts no portfólio de Matheus Riquelme: páginas das quatro casas e demonstração HTML navegável.",
+      "h1": 1,
+      "overflow": false,
+      "schema": 1,
+      "errors": []
+    },
+    {
+      "device": "mobile",
+      "path": "/sexta-feira.html",
+      "title": "Sexta-Feira: assistente local em Python — Matheus Riquelme",
+      "description": "Conheça o projeto Sexta-Feira: assistente local com Python, SQLite, chat e voz opcional. Veja o contexto e as limitações no portfólio.",
+      "h1": 1,
+      "overflow": false,
+      "schema": 1,
+      "errors": []
+    },
+    {
+      "device": "mobile",
+      "path": "/ciberfolio.html",
+      "title": "Ciberfólio: site de portfólio em PHP — Matheus Riquelme",
+      "description": "Conheça o Ciberfólio, projeto web com apresentação, serviços, portfólio e contato em PHP e MySQL. Veja o contexto de desenvolvimento.",
+      "h1": 1,
+      "overflow": false,
+      "schema": 1,
+      "errors": []
+    },
+    {
+      "device": "mobile",
+      "path": "/gestao-compras.html",
+      "title": "Gestão de compras: sistema web em PHP — Matheus Riquelme",
+      "description": "Conheça o projeto Gestão de compras, sistema web em PHP e MySQL com cadastro, autenticação e perfil de usuário. Veja o escopo no portfólio.",
+      "h1": 1,
+      "overflow": false,
+      "schema": 1,
+      "errors": []
+    },
+    {
+      "device": "mobile",
+      "path": "/sobre.html",
+      "title": "Sobre o desenvolvedor web — Matheus Riquelme",
+      "description": "Conheça Matheus Riquelme, desenvolvedor web freelancer com formação técnica em informática, projetos de sites e aplicativos e atendimento online para o RJ.",
+      "h1": 1,
+      "overflow": false,
+      "schema": 1,
+      "image": "http://127.0.0.1:8766/assets/images/portrait-640.webp",
+      "errors": []
+    },
+    {
+      "device": "mobile",
+      "path": "/contato.html",
+      "title": "Contato para criação de sites e aplicativos — Matheus Riquelme",
+      "description": "Converse com Matheus Riquelme sobre criação de sites, lojas virtuais, sistemas web e aplicativos. Atendimento online para projetos no Rio de Janeiro.",
+      "h1": 1,
+      "overflow": false,
+      "schema": 1,
+      "errors": []
+    },
+    {
+      "device": "mobile",
+      "path": "/habilidades.html",
+      "title": "Habilidades em desenvolvimento web — Matheus Riquelme",
+      "description": "Tecnologias aplicadas nos projetos de Riquelme: desenvolvimento web, bancos de dados e aplicativos.",
+      "h1": 1,
+      "overflow": false,
+      "schema": 1,
+      "errors": []
+    },
+    {
+      "device": "desktop",
+      "path": "/",
+      "title": "Desenvolvedor web no Rio de Janeiro — Matheus Riquelme",
+      "description": "Matheus Riquelme, desenvolvedor web freelancer. Criação de sites, landing pages e sistemas web com atendimento online para projetos no Rio de Janeiro.",
+      "h1": 1,
+      "overflow": false,
+      "schema": 1,
+      "image": "http://127.0.0.1:8766/assets/images/portrait-640.webp",
+      "errors": []
+    },
+    {
+      "device": "desktop",
+      "path": "/servicos.html",
+      "title": "Criação de sites no Rio de Janeiro — Matheus Riquelme",
+      "description": "Criação de sites institucionais, landing pages, lojas virtuais e sistemas web. Conheça os serviços de Matheus Riquelme e converse sobre seu projeto no RJ.",
+      "h1": 1,
+      "overflow": false,
+      "schema": 1,
+      "errors": []
+    },
+    {
+      "device": "desktop",
+      "path": "/projetos.html",
+      "title": "Projetos de desenvolvimento web e aplicativos — Matheus Riquelme",
+      "description": "Conheça os projetos de Riquelme: Aranhaverso, ListaTarefas, NexusFC e outros estudos de desenvolvimento.",
+      "h1": 1,
+      "overflow": false,
+      "schema": 1,
+      "errors": []
+    },
+    {
+      "device": "desktop",
+      "path": "/aranhaverso.html",
+      "title": "Aranhaverso: site interativo em PHP — Matheus Riquelme",
+      "description": "Conheça o Aranhaverso, projeto pessoal de Matheus Riquelme com animações, páginas de filmes e desenvolvimento web em PHP, CSS e JavaScript.",
+      "h1": 1,
+      "overflow": false,
+      "schema": 1,
+      "errors": []
+    },
+    {
+      "device": "desktop",
+      "path": "/lista-tarefas.html",
+      "title": "ListaTarefas: aplicativo Android — Matheus Riquelme",
+      "description": "Conheça o ListaTarefas, aplicativo pessoal de organização para Android criado por Matheus Riquelme com React Native, Expo e TypeScript. Versão beta.",
+      "h1": 1,
+      "overflow": false,
+      "schema": 1,
+      "errors": []
+    },
+    {
+      "device": "desktop",
+      "path": "/nexusfc.html",
+      "title": "NexusFC: portal de notícias em PHP — Matheus Riquelme",
+      "description": "Conheça o NexusFC, portal de notícias de futebol desenvolvido no TCC. Desenvolvimento full stack em PHP e MySQL, com demonstração visual.",
+      "h1": 1,
+      "overflow": false,
+      "schema": 1,
+      "errors": []
+    },
+    {
+      "device": "desktop",
+      "path": "/hogwarts.html",
+      "title": "Hogwarts: estudo de site temático — Matheus Riquelme",
+      "description": "Explore o estudo web Hogwarts no portfólio de Matheus Riquelme: páginas das quatro casas e demonstração HTML navegável.",
+      "h1": 1,
+      "overflow": false,
+      "schema": 1,
+      "errors": []
+    },
+    {
+      "device": "desktop",
+      "path": "/sexta-feira.html",
+      "title": "Sexta-Feira: assistente local em Python — Matheus Riquelme",
+      "description": "Conheça o projeto Sexta-Feira: assistente local com Python, SQLite, chat e voz opcional. Veja o contexto e as limitações no portfólio.",
+      "h1": 1,
+      "overflow": false,
+      "schema": 1,
+      "errors": []
+    },
+    {
+      "device": "desktop",
+      "path": "/ciberfolio.html",
+      "title": "Ciberfólio: site de portfólio em PHP — Matheus Riquelme",
+      "description": "Conheça o Ciberfólio, projeto web com apresentação, serviços, portfólio e contato em PHP e MySQL. Veja o contexto de desenvolvimento.",
+      "h1": 1,
+      "overflow": false,
+      "schema": 1,
+      "errors": []
+    },
+    {
+      "device": "desktop",
+      "path": "/gestao-compras.html",
+      "title": "Gestão de compras: sistema web em PHP — Matheus Riquelme",
+      "description": "Conheça o projeto Gestão de compras, sistema web em PHP e MySQL com cadastro, autenticação e perfil de usuário. Veja o escopo no portfólio.",
+      "h1": 1,
+      "overflow": false,
+      "schema": 1,
+      "errors": []
+    },
+    {
+      "device": "desktop",
+      "path": "/sobre.html",
+      "title": "Sobre o desenvolvedor web — Matheus Riquelme",
+      "description": "Conheça Matheus Riquelme, desenvolvedor web freelancer com formação técnica em informática, projetos de sites e aplicativos e atendimento online para o RJ.",
+      "h1": 1,
+      "overflow": false,
+      "schema": 1,
+      "image": "http://127.0.0.1:8766/assets/images/portrait-640.webp",
+      "errors": []
+    },
+    {
+      "device": "desktop",
+      "path": "/contato.html",
+      "title": "Contato para criação de sites e aplicativos — Matheus Riquelme",
+      "description": "Converse com Matheus Riquelme sobre criação de sites, lojas virtuais, sistemas web e aplicativos. Atendimento online para projetos no Rio de Janeiro.",
+      "h1": 1,
+      "overflow": false,
+      "schema": 1,
+      "errors": []
+    },
+    {
+      "device": "desktop",
+      "path": "/habilidades.html",
+      "title": "Habilidades em desenvolvimento web — Matheus Riquelme",
+      "description": "Tecnologias aplicadas nos projetos de Riquelme: desenvolvimento web, bancos de dados e aplicativos.",
+      "h1": 1,
+      "overflow": false,
+      "schema": 1,
+      "errors": []
+    },
+    {
+      "noJavaScript": {
+        "navigation": true,
+        "content": "Sou Matheus Riquelme, desenvolvedor web freelancer. Crio sites e aplicativos, com atendimento online para projetos no Rio de Janeiro."
+      }
+    }
+  ],
+  "published_pages": [
+    {
+      "url": "https://matheus-riquelme-web.vercel.app/",
+      "status": 200,
+      "title": "Desenvolvedor freelancer · Sites e aplicativos — Matheus Riquelme",
+      "description": "Riquelme: desenvolvimento de sites, interfaces, sistemas web e aplicativos. Conheça meus projetos e vamos conversar sobre sua ideia.",
+      "canonical": "https://matheus-riquelme-web.vercel.app/"
+    },
+    {
+      "url": "https://matheus-riquelme-web.vercel.app/servicos.html",
+      "status": 200,
+      "title": "Serviços e processo — Matheus Riquelme",
+      "description": "Sites institucionais, landing pages, lojas virtuais, sistemas web e aplicativos por Matheus Riquelme.",
+      "canonical": "https://matheus-riquelme-web.vercel.app/servicos.html"
+    },
+    {
+      "url": "https://matheus-riquelme-web.vercel.app/projetos.html",
+      "status": 200,
+      "title": "Projetos — Matheus Riquelme",
+      "description": "Conheça os projetos de Riquelme: Aranhaverso, ListaTarefas, NexusFC e outros estudos de desenvolvimento.",
+      "canonical": "https://matheus-riquelme-web.vercel.app/projetos.html"
+    },
+    {
+      "url": "https://matheus-riquelme-web.vercel.app/aranhaverso.html",
+      "status": 200,
+      "title": "Aranhaverso — Matheus Riquelme",
+      "description": "Três Homens-Aranha. Uma experiência cinematográfica.",
+      "canonical": "https://matheus-riquelme-web.vercel.app/aranhaverso.html"
+    },
+    {
+      "url": "https://matheus-riquelme-web.vercel.app/lista-tarefas.html",
+      "status": 200,
+      "title": "ListaTarefas — Matheus Riquelme",
+      "description": "Mais clareza para organizar a rotina.",
+      "canonical": "https://matheus-riquelme-web.vercel.app/lista-tarefas.html"
+    },
+    {
+      "url": "https://matheus-riquelme-web.vercel.app/nexusfc.html",
+      "status": 200,
+      "title": "NexusFC — Matheus Riquelme",
+      "description": "Futebol em perspectiva. Do conteúdo ao sistema.",
+      "canonical": "https://matheus-riquelme-web.vercel.app/nexusfc.html"
+    },
+    {
+      "url": "https://matheus-riquelme-web.vercel.app/hogwarts.html",
+      "status": 200,
+      "title": "Hogwarts — Matheus Riquelme",
+      "description": "Uma exploração visual das quatro casas de Hogwarts.",
+      "canonical": "https://matheus-riquelme-web.vercel.app/hogwarts.html"
+    },
+    {
+      "url": "https://matheus-riquelme-web.vercel.app/sexta-feira.html",
+      "status": 200,
+      "title": "Sexta-Feira — Matheus Riquelme",
+      "description": "Uma experiência com chat, voz e organização local.",
+      "canonical": "https://matheus-riquelme-web.vercel.app/sexta-feira.html"
+    },
+    {
+      "url": "https://matheus-riquelme-web.vercel.app/ciberfolio.html",
+      "status": 200,
+      "title": "Ciberfólio — Matheus Riquelme",
+      "description": "Apresentação, serviços e portfólio em PHP.",
+      "canonical": "https://matheus-riquelme-web.vercel.app/ciberfolio.html"
+    },
+    {
+      "url": "https://matheus-riquelme-web.vercel.app/gestao-compras.html",
+      "status": 200,
+      "title": "Gestão de compras — Matheus Riquelme",
+      "description": "Uma estrutura para cadastro, acesso e perfil.",
+      "canonical": "https://matheus-riquelme-web.vercel.app/gestao-compras.html"
+    },
+    {
+      "url": "https://matheus-riquelme-web.vercel.app/sobre.html",
+      "status": 200,
+      "title": "Sobre mim — Matheus Riquelme",
+      "description": "Conheça Riquelme, desenvolvedor de sites e aplicativos com formação técnica em informática.",
+      "canonical": "https://matheus-riquelme-web.vercel.app/sobre.html"
+    },
+    {
+      "url": "https://matheus-riquelme-web.vercel.app/contato.html",
+      "status": 200,
+      "title": "Vamos conversar — Matheus Riquelme",
+      "description": "Entre em contato com Riquelme para criar sites, lojas virtuais, sistemas web e aplicativos.",
+      "canonical": "https://matheus-riquelme-web.vercel.app/contato.html"
+    },
+    {
+      "url": "https://matheus-riquelme-web.vercel.app/habilidades.html",
+      "status": 200,
+      "title": "Habilidades — Matheus Riquelme",
+      "description": "Tecnologias aplicadas nos projetos de Riquelme: desenvolvimento web, bancos de dados e aplicativos.",
+      "canonical": "https://matheus-riquelme-web.vercel.app/habilidades.html"
+    }
+  ]
+}

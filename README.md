@@ -37,17 +37,17 @@ O catálogo foi reconstruído em JSON, aproveitando a aceitação de edição pe
 
 Os bancos dos projetos Aranhaverso e NexusFC são independentes: a mudança do catálogo não instala nem corrige esses sistemas. NexusFC e Hogwarts têm demos estáticas; o Aranhaverso leva ao repositório com instruções de instalação. ListaTarefas leva à distribuição beta, com código-fonte privado.
 
-## Vercel (preparado, ainda não publicado)
+## Vercel e SEO
 
-Importe o repositório como projeto **Other**, build `npm run build`, saída `dist`. `vercel.json` contém a configuração e os cabeçalhos.
+Site de produção: https://matheus-riquelme-web.vercel.app/ . Build `npm run build`, saída `dist`.
 
-Na produção, defina `SITE_URL` com a origem HTTPS definitiva (exemplo de formato: `https://seu-dominio.com`, sem caminhos). Se omitida, o build de produção tenta usar `VERCEL_PROJECT_PRODUCTION_URL`. Após definir ou mudar o domínio, faça novo deploy.
+O gerador usa essa origem oficial por padrão. `SITE_URL` pode substituí-la por outra origem HTTPS sem caminhos; após mudar o domínio, faça novo build. Em Vercel, qualquer `VERCEL_ENV` diferente de `production` gera uma prévia noindex, sem canonical nem sitemap, mesmo que herde `SITE_URL`. A configuração anterior descrita neste README não correspondia ao código.
 
-Com URL de produção, o build gera canonical, Open Graph, `sitemap.xml` e robots. Sem URL, a saída é uma **prévia noindex**, com robots bloqueando rastreamento. Não publique esperando indexação antes de configurar a URL. Não há domínio fictício embutido. Preview deployments devem permanecer sem SITE_URL de produção.
+O build gera titles e descriptions exclusivos, canonical, Open Graph/Twitter, JSON-LD Person/ProfessionalService/WebSite, robots e sitemap das 13 páginas indexáveis. O hash exato do JSON-LD é atualizado em `vercel.json` para respeitar a CSP sem liberar scripts inline arbitrários. Use o `vercel.json` resultante do build na publicação. Não há endereço físico, avaliações, clientes ou métricas comerciais inventados. O RJ é área de atendimento online, não uma afirmação de sede física.
 
-Os antigos `.php` redirecionam. `projeto.php?slug=...` e `demo.php?slug=...` levam à página correspondente via ponte estática; a ponte oferece o catálogo caso JavaScript esteja desativado.
+A página 404 e a ponte `projeto.html` não indexam. Demos recebem `X-Robots-Tag: noindex`, mas podem ser rastreadas para o buscador ler esse cabeçalho. `index.html` redireciona permanentemente à raiz; `processo.html` leva aos serviços. Os antigos `.php` continuam com redirecionamentos e a ponte de projeto preservada.
 
-Depois do deploy: conferir links, headers, indexação permitida, sitemap e canonical no domínio real. Search Console depende da conta e domínio; nenhum cadastro foi feito. SEO não garante tráfego ou posições.
+O arquivo de verificação Google existente é preservado no build; isso não comprova que a conta atual possui uma propriedade verificada. Consulte [auditoria e plano de indexação](docs/seo-audit.md) para as verificações, limitações e passos no Search Console. Não foi publicada uma nova versão nesta tarefa.
 
 ## Segurança e limites
 

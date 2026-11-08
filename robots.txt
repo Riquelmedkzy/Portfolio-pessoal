@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-Disallow: /demos/
 Sitemap: https://matheus-riquelme-web.vercel.app/sitemap.xml

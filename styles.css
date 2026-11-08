@@ -25,3 +25,10 @@ body{overflow-x:clip}.orbit-stage{overflow:clip;overflow-clip-margin:14px}.orbit
 @media(max-width:600px){.home-page .hero{padding-top:24px}.home-page .hero-role{margin-top:12px}.home-page .hero-intro{margin-top:14px}.home-page .hero .actions{flex-wrap:nowrap;margin-top:20px;gap:8px}.home-page .hero .button{font-size:11px;padding:10px 13px;min-height:44px;gap:10px;white-space:nowrap}.home-page .hero .availability{margin-top:16px}.home-page .hero-social{margin-top:6px}.home-page .orbit-stage{max-height:330px}.home-page .hero .orbit-portrait{margin-top:0}}
 /* A source-only review branch can build before its portrait asset is approved. */
 .orbit-portrait--fallback .orbit-panels,.orbit-portrait--fallback .orbit-track{display:none}.orbit-portrait--fallback .orbit-person{object-fit:contain}
+
+/* Keep service titles at their existing visual size with a semantic h2. */
+.service-list h2{font-size:23px;letter-spacing:-.015em}
+.services>div>p{margin-top:24px;color:var(--muted)}
+
+/* Entrance transforms must not create a temporary horizontal mobile viewport. */
+html{overflow-x:clip}
