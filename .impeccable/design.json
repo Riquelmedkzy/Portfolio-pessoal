@@ -1,0 +1,212 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-08T01:42:09.752210+00:00",
+  "title": "Design System: Portfólio de Riquelme — Orbit",
+  "extensions": {
+    "colorMeta": {
+      "action": {
+        "role": "primary",
+        "displayName": "Azul elétrico"
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Azul de destaque"
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Azul noturno"
+      },
+      "panel-cyan": {
+        "role": "secondary",
+        "displayName": "Ciano orbital"
+      },
+      "panel-violet": {
+        "role": "secondary",
+        "displayName": "Violeta orbital"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Título inicial",
+        "purpose": "Título do início em desktop; ajustes responsivos em styles.css."
+      },
+      "body": {
+        "displayName": "Corpo",
+        "purpose": "Texto principal em DM Sans; limite geral de 65ch."
+      }
+    },
+    "shadows": [
+      {
+        "name": "orbit-panel",
+        "value": "0 14px 32px #0004, inset 0 -1px #6297ff",
+        "purpose": "Profundidade suave dos seis painéis."
+      },
+      {
+        "name": "mobile-navigation",
+        "value": "0 24px 40px #0005",
+        "purpose": "Menu móvel aberto."
+      }
+    ],
+    "motion": [
+      {
+        "name": "orbit-cycle",
+        "value": "30s",
+        "purpose": "Seis painéis independentes; camadas 2/20 em volta do retrato estático na camada 10."
+      },
+      {
+        "name": "skills-ribbon-cycle",
+        "value": "42s linear infinite",
+        "purpose": "Faixa de tecnologias, condicionada à visibilidade e permissão de movimento."
+      },
+      {
+        "name": "entrance-easing",
+        "value": "cubic-bezier(.16,1,.3,1)",
+        "purpose": "Entradas curtas de conteúdo."
+      },
+      {
+        "name": "project-filter",
+        "value": "400ms ease-out",
+        "purpose": "Entrada dos cartões revelados pelo filtro quando movimento está ativo."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "wide",
+        "value": "1500px"
+      },
+      {
+        "name": "desktop-compact",
+        "value": "1100px"
+      },
+      {
+        "name": "skills-three-columns",
+        "value": "900px"
+      },
+      {
+        "name": "mobile-navigation",
+        "value": "800px"
+      },
+      {
+        "name": "skills-two-columns",
+        "value": "700px"
+      },
+      {
+        "name": "stacked",
+        "value": "600px"
+      }
+    ],
+    "lifecycle": {
+      "pause": "Controle global persistido em portfolio-motion; preferência reduced-motion desabilita o controle e mantém conteúdo estático.",
+      "hiddenTab": "Órbita, partículas, faixa e rotas suspendem reprodução em aba oculta. Órbita e Habilidades também observam entrada e saída da viewport.",
+      "portrait": "Recorte WebP original imóvel; painéis decorativos independentes e aria-hidden.",
+      "contact": "Compositor mailto; envio final no aplicativo da pessoa, sem entrega ou armazenamento em servidor."
+    },
+    "sourceFiles": [
+      "styles.css",
+      "assets/css/skills.css",
+      "assets/css/skills-theme.css",
+      "assets/js/experience.js",
+      "assets/js/motion.js",
+      "assets/js/habilidades.js",
+      "scripts/ui.mjs"
+    ]
+  },
+  "components": [
+    {
+      "name": "Ação principal",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Ação preenchida para a próxima etapa principal.",
+      "html": "<button class=\"ds-primary\">Ver projetos</button>",
+      "css": ".ds-primary{font-family:'DM Sans',Arial,sans-serif;display:inline-flex;align-items:center;min-height:48px;padding:12px 20px;border:1px solid transparent;border-radius:9px;background:var(--action,#315ff4);color:#fff;font-size:13px;font-weight:600;transition:background .2s,transform .2s}.ds-primary:hover{background:#234ed5;transform:translateY(-2px)}.ds-primary:focus-visible{outline:2px solid var(--accent,#709bff);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-primary{transition:none}.ds-primary:hover{transform:none}}"
+    },
+    {
+      "name": "Ação secundária",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Ação com vidro e contorno.",
+      "html": "<button class=\"ds-secondary\">Entre em contato</button>",
+      "css": ".ds-secondary{font-family:'DM Sans',Arial,sans-serif;min-height:48px;padding:12px 20px;border:1px solid var(--line,#25334e);border-radius:9px;background:var(--glass,#0a1123d9);color:var(--ink,#f1f5ff);font-size:13px;font-weight:600;transition:background .2s}.ds-secondary:hover{background:var(--surface-raised,#131f34)}.ds-secondary:focus-visible{outline:2px solid var(--accent,#709bff);outline-offset:5px}"
+    },
+    {
+      "name": "Campo de contato",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Campo com rótulo explícito para o compositor de email.",
+      "html": "<label class=\"ds-label\" for=\"ds-email\">Seu email</label><input class=\"ds-input\" id=\"ds-email\" type=\"email\" placeholder=\"voce@exemplo.com\">",
+      "css": ".ds-label{font-family:'DM Sans',Arial,sans-serif;display:block;font-size:12px;color:var(--ink,#f1f5ff);margin:0 0 8px}.ds-input{font-family:'DM Sans',Arial,sans-serif;width:100%;padding:13px 15px;border:1px solid var(--line,#25334e);border-radius:8px;background:var(--paper,#050912);color:var(--ink,#f1f5ff);font-size:14px;caret-color:var(--accent,#709bff)}.ds-input::placeholder{color:var(--muted,#a2b0ca);opacity:1}.ds-input:focus-visible{outline:2px solid var(--accent,#709bff);outline-offset:5px}"
+    },
+    {
+      "name": "Navegação em cápsula",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "Marca separada da cápsula; rota ativa por aria-current.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Exemplo\"><a href=\"#inicio\" aria-current=\"page\">Início</a><a href=\"#projetos\">Projetos</a></nav>",
+      "css": ".ds-nav{font-family:'DM Sans',Arial,sans-serif;display:flex;gap:3px;padding:5px;border:1px solid var(--line,#25334e);border-radius:99px;background:var(--glass,#0a1123d9);backdrop-filter:blur(18px)}.ds-nav a{display:inline-flex;align-items:center;min-height:40px;padding:8px 15px;border-radius:99px;color:var(--muted,#a2b0ca);font-size:12px;font-weight:500;text-decoration:none;transition:background .22s,color .22s}.ds-nav a:hover,.ds-nav a[aria-current=page]{color:var(--ink,#f1f5ff);background:var(--surface-raised,#131f34)}.ds-nav a[aria-current=page]{box-shadow:inset 0 0 0 1px var(--line,#25334e)}.ds-nav a:focus-visible{outline:2px solid var(--accent,#709bff);outline-offset:5px}"
+    },
+    {
+      "name": "Filtro de projeto",
+      "kind": "chip",
+      "refersTo": "filter",
+      "description": "Filtro com estado selecionado explícito; comportamento depende do site.",
+      "html": "<button class=\"ds-filter\" aria-pressed=\"true\">Todos</button>",
+      "css": ".ds-filter{font-family:'DM Sans',Arial,sans-serif;min-height:44px;padding:9px 16px;border:1px solid var(--line,#25334e);border-radius:8px;background:var(--glass,#0a1123d9);color:var(--muted,#a2b0ca);font-size:12px}.ds-filter[aria-pressed=true]{background:var(--action,#315ff4);color:#fff;border-color:transparent}.ds-filter:focus-visible{outline:2px solid var(--accent,#709bff);outline-offset:5px}"
+    },
+    {
+      "name": "Cartão de projeto",
+      "kind": "card",
+      "refersTo": "project-card",
+      "description": "Recorte do conteúdo do cartão; o site acrescenta o visual próprio de cada projeto.",
+      "html": "<article class=\"ds-card\"><a class=\"ds-card-link\" href=\"#aranhaverso\"><h3>Aranhaverso</h3><p>Projeto pessoal.</p><span>Conhecer projeto</span></a></article>",
+      "css": ".ds-card{font-family:'DM Sans',Arial,sans-serif;border:1px solid var(--line,#25334e);border-radius:15px;background:linear-gradient(155deg,var(--surface,#0d1525),var(--paper,#050912));overflow:hidden;color:var(--ink,#f1f5ff);transition:border-color .25s}.ds-card:hover,.ds-card:focus-within{border-color:var(--accent,#709bff)}.ds-card-link{display:block;padding:22px;text-decoration:none;color:inherit}.ds-card h3{font-size:23px;line-height:1.12;margin:0;font-weight:700}.ds-card p{font-size:13px;line-height:1.65;color:var(--muted,#a2b0ca);margin:12px 0 24px}.ds-card span{font-size:11px;color:var(--accent,#709bff)}.ds-card-link:focus-visible{outline:2px solid var(--accent,#709bff);outline-offset:5px}"
+    },
+    {
+      "name": "Cartão de habilidade",
+      "kind": "card",
+      "refersTo": "skill-card",
+      "description": "Cor local da tecnologia; ícones existentes permanecem no site.",
+      "html": "<article class=\"ds-skill\"><h3>React</h3><p>Aplicado em ListaTarefas.</p><a href=\"#listatarefas\">Conhecer projeto</a></article>",
+      "css": ".ds-skill{font-family:'DM Sans',Arial,sans-serif;min-height:188px;padding:22px;border:1px solid var(--line,#25334e);border-radius:13px;background:linear-gradient(140deg,color-mix(in srgb,#61dafb 8%,var(--surface,#0d1525)),var(--paper,#050912));color:var(--ink,#f1f5ff)}.ds-skill:hover,.ds-skill:focus-within{border-color:#61dafb;background:color-mix(in srgb,#61dafb 12%,var(--surface,#0d1525))}.ds-skill h3{font-size:20px;font-weight:700;line-height:1.2;margin:0}.ds-skill p{color:var(--muted,#a2b0ca);font-size:12px}.ds-skill a{display:inline-block;min-height:44px;padding-top:10px;font-size:11px;text-underline-offset:4px;color:inherit}.ds-skill a:focus-visible{outline:2px solid var(--accent,#709bff);outline-offset:5px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Orbit",
+    "overview": "Um ambiente de desenvolvimento em azul noturno: o retrato original permanece humano e imóvel enquanto pequenos painéis de código circulam ao redor. Superfícies discretas, tipografia direta e ações elétricas conduzem à exploração dos projetos e ao contato.\n\nEsta documentação registra a substituição visual autorizada do antigo marfim e verde pelo sistema atual. O tema inicial é escuro; uma escolha manual persistida pode ativar a alternativa clara. As páginas de início, projetos, sobre, habilidades, serviços, contato e estudos de caso continuam separadas.",
+    "keyCharacteristics": [
+      "Retrato original em preto e branco, com óculos e moletom, preservado como recorte WebP estático.",
+      "Azul elétrico para ações; ciano e violeta nos detalhes dos painéis.",
+      "Navegação em cápsula de vidro, cartões delimitados e hierarquia em DM Sans.",
+      "Movimento opcional, com controles de pausa e respeito à preferência por movimento reduzido."
+    ],
+    "rules": [
+      {
+        "name": "The Semantic Color Rule",
+        "body": "Mantenha a função de cada variável nos dois temas; cores das tecnologias e da cena orbital são detalhes locais.",
+        "section": "colors"
+      },
+      {
+        "name": "The Existing Font Rule",
+        "body": "Continue com DM Sans; não introduza uma nova família para simular um ambiente de código.",
+        "section": "typography"
+      },
+      {
+        "name": "The Still Portrait Rule",
+        "body": "Anime os painéis, não o retrato; mantenha a passagem dianteira abaixo do rosto.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** preserve o retrato original estático e o rosto livre durante a órbita.",
+      "**Do** mantenha os papéis semânticos de cor e a alternativa clara implementada.",
+      "**Do** preserve controles de pausa, foco visível e conteúdo disponível sem animação.",
+      "**Do** mantenha as cores das tecnologias e a continuidade das rotas e da faixa em Habilidades.",
+      "**Do** descreva o formulário como preparação de email e oriente a conclusão no aplicativo."
+    ],
+    "donts": [
+      "**Don't** recupere marfim e verde como identidade principal deste sistema.",
+      "**Don't** acrescente novas famílias tipográficas à hierarquia existente.",
+      "**Don't** anime o retrato ou transforme os seis painéis em uma única imagem giratória.",
+      "**Don't** invente métricas, credenciais, capturas de produto ou confirmação de envio."
+    ]
+  }
+}

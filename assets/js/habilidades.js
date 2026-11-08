@@ -22,6 +22,7 @@ let animationFrame = 0;
 let lastLightUpdate = 0;
 
 function animate(element, property, keyframes, options, isRoute = false) {
+  if (!canAnimate()) return null;
   try {
     const animation = animateStyle(element, property, keyframes, options)();
     if (animation && typeof animation.pause === 'function') {
@@ -67,13 +68,13 @@ function updateScenePlayback() {
 
   entryAnimations.forEach((animation) => {
     if (canPlay && animation.playState === 'paused') animation.play();
-    if (!canPlay && animation.playState === 'running') animation.pause();
+    if (!canPlay && animation.playState !== 'finished') { try { animation.finish(); } catch { animation.cancel(); } }
   });
 
   sceneStates.forEach((state) => {
     const active = state.active && canPlay;
     state.scene.classList.toggle('is-active', active);
-    if (active) hasActiveScene = true;
+    if (active) { hasActiveScene = true; if (!state.drawn) drawScene(state); }
 
     state.routes.forEach((route) => {
       if (!route.animation || route.animation.playState === 'finished') return;
@@ -199,7 +200,7 @@ if (main && 'IntersectionObserver' in window) {
 
   setMotionObservers();
   document.addEventListener('visibilitychange', updateScenePlayback);
-  document.addEventListener('portfolio-motion', updateScenePlayback);
+  document.addEventListener('portfolio-motion', () => { if (canAnimate() && !motionObservers.length) setMotionObservers(); updateScenePlayback(); });
   reducedMotion.addEventListener('change', () => {
     if (reducedMotion.matches) {
       stopMotionObservers();
