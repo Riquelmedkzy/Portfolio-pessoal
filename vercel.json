@@ -5,6 +5,17 @@
   "cleanUrls": false,
   "redirects": [
     {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "riquelmedev.vercel.app"
+        }
+      ],
+      "destination": "https://matheus-riquelme-web.vercel.app/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [
         {

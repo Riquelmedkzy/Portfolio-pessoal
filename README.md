@@ -47,7 +47,7 @@ O build gera titles e descriptions exclusivos, canonical, Open Graph/Twitter, JS
 
 A página 404 e a ponte `projeto.html` não indexam. Demos recebem `X-Robots-Tag: noindex`, mas podem ser rastreadas para o buscador ler esse cabeçalho. `index.html` redireciona permanentemente à raiz; `processo.html` leva aos serviços. Os antigos `.php` continuam com redirecionamentos e a ponte de projeto preservada.
 
-O arquivo de verificação Google existente é preservado no build; isso não comprova que a conta atual possui uma propriedade verificada. Consulte [auditoria e plano de indexação](docs/seo-audit.md) para as verificações, limitações e passos no Search Console. Não foi publicada uma nova versão nesta tarefa.
+O arquivo de verificação Google existente é preservado no build; isso não comprova que a conta atual possui uma propriedade verificada. Consulte [auditoria e plano de indexação](docs/seo-audit.md) para as verificações, limitações e passos no Search Console. A versão com as melhorias de SEO foi publicada em produção após autorização explícita do usuário em 8 de novembro de 2026.
 
 ## Segurança e limites
 

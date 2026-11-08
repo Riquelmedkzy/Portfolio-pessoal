@@ -1,6 +1,6 @@
 # Auditoria de SEO — 8 de novembro de 2026
 
-Produção auditada: https://matheus-riquelme-web.vercel.app/ . Repositório: https://github.com/Riquelmedkzy/Portfolio-pessoal . Alterações preparadas localmente; nenhuma publicação, push ou alteração no Search Console. O histórico referenciado só continha o pedido de aumentar a descoberta, sem autorização explícita para publicar.
+Produção auditada: https://matheus-riquelme-web.vercel.app/ . Repositório: https://github.com/Riquelmedkzy/Portfolio-pessoal . A auditoria inicial preparou alterações localmente, sem publicar. Em seguida, o usuário autorizou explicitamente a publicação, executada em 8 de novembro de 2026. O Search Console não foi alterado.
 
 ## Diagnóstico e correções
 
@@ -88,3 +88,10 @@ Os documentos internos de design já tinham diferenças de versão apontadas pel
 - Lighthouse 13.6.0, mobile com throttling simulado: produção auditada 87 desempenho / 100 acessibilidade / 100 SEO; FCP 1,6s, LCP 2,5s, TBT 390ms, CLS 0. Versão local, execução serial final: 84 / 100 / 100; FCP 1,4s, LCP 2,4s, TBT 530ms, CLS 0. Uma execução exploratória concorrente foi descartada da comparação por disputar CPU com os testes de navegador.
 - As medições são de laboratório, uma execução final por origem, em hosts diferentes (CDN de produção e servidor local), sem dados de usuários reais. **Não foi demonstrado ganho na nota de desempenho**. A redução de bytes é verificável; animações contínuas e custo de renderização ainda afetam a thread principal. Foram preservadas por pedido do usuário. Não se pode afirmar que Core Web Vitals reais passaram com base nesses testes.
 - Evidências resumidas e metadados antes/depois: `docs/seo-validation.json`. Capturas e relatórios brutos de trabalho ficam em `.local/seo/` (fora do Git), com os relatórios Lighthouse finais copiados para lá. Teste externo de rich results e readback em produção seguem pendentes de publicação.
+
+
+## Publicação autorizada — 8 de novembro de 2026
+
+O usuário autorizou a publicação após revisar o resumo. O commit 48cdd9e foi enviado à main; a integração Git da Vercel publicou em produção no projeto portfolio-pessoal, equipe team_DBspA7HqfOtpQNz2OWmgUAUf. Deployment dpl_4ew94XTgLLYYqWZsairTpFjifsHp atingiu READY. As 13 páginas publicadas coincidiram exatamente com os arquivos HTML locais e apresentaram canonical, indexação e hash CSP corretos. Sitemap, robots, arquivo de verificação Google, retrato responsivo e noindex de demos/404 foram confirmados por HTTP. Endereço inexistente retornou 404; index.html e processo.html retornaram 308 para seus destinos.
+
+A verificação revelou que a regra /:path* redirecionava páginas internas do domínio antigo, mas não a raiz. Foi acrescentada uma regra de host explícita para /, preservando o tratamento das demais rotas. O destino é sempre o domínio oficial. A seção anterior “Publicação pendente” registra o plano original; esta atualização registra a publicação autorizada. A solicitação de indexação e a medição no Search Console continuam sob responsabilidade da conta proprietária.
