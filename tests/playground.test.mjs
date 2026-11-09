@@ -130,3 +130,14 @@ test("inventário inclui os sete repositórios públicos selecionados", async ()
   ])
     assert.ok(!repos.some((r) => r.name === name));
 });
+
+test('todos os projetos exibidos têm demo real e descrição de seus limites',async()=>{
+ const listed=projects.filter(p=>p.listed!==false);
+ assert.equal(listed.length,8);
+ for(const p of listed){assert.ok(p.demo,p.slug);assert.ok(p.demoNote?.length>40,p.slug);const html=await readFile('dist/'+p.demo,'utf8');assert.match(html,/<html\b/);const study=await readFile('dist/'+p.slug+'.html','utf8');assert.ok(study.includes(`data-load-demo="${p.demo}"`));}
+ const registry=await import('../assets/js/demo-registry.js');assert.deepEqual(registry.demoPaths,projects.filter(p=>p.demo).map(p=>p.demo));
+});
+test('exports novos contêm somente apresentação pública e fixtures de catálogo',async()=>{
+ for(const slug of ['pokelab','mundo-invertido','ciberfolio','gestao-compras','lista-tarefas']){const files=await readdir('dist/demos/'+slug,{recursive:true});assert.equal(files.some(f=>/\.(?:php|sqlite|sql|log|env|ini|bak)$/.test(f)||/(?:^|\/)(?:uploads|\.private|config)(?:\/|$)/.test(f)),false);}
+ const poke=await readFile('dist/demos/pokelab/index.html','utf8');assert.doesNotMatch(poke,/\\account\.html|home-fire#catalog/);assert.match(poke,/home-fire\.html#catalog/);
+});

@@ -56,3 +56,7 @@ Abra `http://127.0.0.1:8765/habilidades.html`. A prévia serve somente `dist`, a
 ## Verificação
 
 Resultados detalhados estão registrados em `docs/digital-playground-validation.md`. Capturas locais ficam em `.impeccable/review/` e relatórios de execução em `.local/playground/`, fora do pacote público.
+
+## Demos ampliadas
+
+Todos os oito projetos atualmente exibidos possuem demonstração. A nova implementação, origens, limitações e testes estão em [Demonstrações dos projetos](project-demos.md). Esse registro substitui as limitações históricas acima sobre ausência de uma demo web do ListaTarefas e sobre demos disponíveis apenas para parte dos projetos. O ListaTarefas web é uma adaptação explicitamente identificada; o app nativo e seu código privado não foram publicados.

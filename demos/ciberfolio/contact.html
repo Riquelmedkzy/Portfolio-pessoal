@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090909">
+  <meta name="description" content="NexusFC — equipe de desenvolvimento de sites, sistemas web e aplicativos.">
+  <meta name="csrf-token" content="demo-no-server">
+  <title>Contato — NexusFC</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="assets/img/nexus-mark.svg" type="image/svg+xml">
+  <script src="assets/js/site.js" defer></script>
+  
+<meta name="robots" content="noindex,follow"><link rel="stylesheet" href="../presentation.css"><script src="../presentation.js"></script></head>
+
+<body class="route-contact">
+  <div class="page-transition" data-page-transition aria-hidden="true"><span>NEXUSFC</span></div>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header" data-site-header>
+    <nav class="site-nav" aria-label="Navegação principal">
+      <a class="brand" href="index.html" aria-label="NexusFC — página inicial">
+        <img class="brand__mark" src="assets/img/nexus-mark.svg" alt="" width="32" height="32">
+        <span class="brand__name">NEXUS<span>FC</span></span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-panel" data-nav-toggle>
+        <span class="nav-toggle__label">Menu</span>
+        <span class="nav-toggle__icon" aria-hidden="true"><i></i><i></i></span>
+      </button>
+
+      <div class="nav-panel" id="nav-panel" data-nav-panel>
+        <ul class="nav-links">
+          <li><a href="index.html">Início <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    <path d="M7 17 17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="miter"/>
+  </svg></a></li>
+          <li><a href="sobre.html">Sobre nós <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    <path d="M7 17 17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="miter"/>
+  </svg></a></li>
+          <li><a href="servico.html">Serviços <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    <path d="M7 17 17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="miter"/>
+  </svg></a></li>
+          <li><a href="portfolio.html">Portfólio <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    <path d="M7 17 17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="miter"/>
+  </svg></a></li>
+          <li><a href="contact.html" aria-current="page">Contato <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    <path d="M7 17 17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="miter"/>
+  </svg></a></li>
+        </ul>
+
+        <div class="nav-account">
+                      <a class="nav-login" href="auth_login.html">Login <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    <path d="M7 17 17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="miter"/>
+  </svg></a>
+                  </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="conteudo" tabindex="-1">
+<div class="internal-page contact-page" data-internal-page>
+  <header class="contact-hero" aria-labelledby="contact-title">
+    <div class="contact-hero__index" aria-hidden="true"><span>04</span><i></i><span>Contato</span></div>
+    <div class="contact-hero__statement"><h1 id="contact-title">Vamos colocar<br><em>algo em movimento?</em></h1><p>Conte o que você precisa organizar, criar ou transformar. A conversa começa por aqui.</p></div>
+    <div class="contact-hero__signal" aria-hidden="true"><span></span><b>Canal aberto</b><i></i><i></i><i></i></div>
+  </header>
+
+  <section class="contact-layout" id="formulario" aria-label="Formulário de contato">
+    <aside class="contact-aside reveal"><h2>Da primeira mensagem<br>ao próximo passo.</h2><p>Descreva sua ideia com as informações que já tiver. Não precisa chegar com tudo definido.</p><ol aria-label="Como funciona o contato"><li><span>01</span>Você apresenta o contexto</li><li><span>02</span>A equipe organiza a necessidade</li><li><span>03</span>Definimos o próximo passo</li></ol></aside>
+    <div class="contact-form-panel reveal">
+            <div class="contact-form-panel__heading"><span>Formulário / 01</span><p>Todos os campos marcados são obrigatórios.</p></div>
+      <form class="contact-form" action="account.html" method="POST" data-contact-form>
+                <div class="field-grid">
+          <div class="field-group"><label for="contact-name">Nome <span aria-hidden="true">*</span></label><input id="contact-name" required maxlength="100" type="text" name="name" autocomplete="name" placeholder="Como podemos chamar você?" value=""></div>
+          <div class="field-group"><label for="contact-email">E-mail <span aria-hidden="true">*</span></label><input id="contact-email" required maxlength="150" type="email" name="email" autocomplete="email" placeholder="voce@exemplo.com" value=""></div>
+        </div>
+        <div class="field-group"><label for="contact-subject">Assunto</label><input id="contact-subject" maxlength="150" type="text" name="subject" placeholder="Ex.: site, aplicativo, sistema ou documentação"></div>
+        <div class="field-group"><label for="contact-message">Mensagem <span aria-hidden="true">*</span></label><textarea id="contact-message" required maxlength="5000" name="message" rows="7" placeholder="Conte brevemente o que você precisa, para quem é e o que gostaria de resolver."></textarea><span class="field-hint">Quanto mais contexto, melhor será a primeira conversa.</span></div>
+        <div class="contact-form__footer"><p>Ao enviar, sua mensagem será registrada para retorno da equipe.</p><button class="button button--accent" type="submit" data-submit-button>Enviar mensagem <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    <path d="M7 17 17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="miter"/>
+  </svg></button></div>
+      </form>
+    </div>
+  </section>
+</div>
+<script src="assets/js/internal.js" defer></script>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <a class="brand brand--footer" href="index.html" aria-label="NexusFC — página inicial">
+        <img class="brand__mark" src="assets/img/nexus-mark.svg" alt="" width="32" height="32">
+        <span class="brand__name">NEXUS<span>FC</span></span>
+      </a>
+      <p>Ideias, pessoas e tecnologia<br>conectadas por software.</p>
+      <div class="site-footer__meta">
+        <span>&copy; 2026 NexusFC</span>
+        <a href="contact.html">Inicie uma conversa <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    <path d="M7 17 17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="miter"/>
+  </svg></a>
+      </div>
+    </div>
+  </footer>
+<aside class="demo-presentation-note"><a href="../../ciberfolio.html" target="_blank" rel="noopener noreferrer">Ver estudo de caso</a><span>Demo navegável · sem backend · formulários não enviam dados</span><button type="button" data-presentation-pause>Pausar movimento</button></aside></body>
+</html>

@@ -1,3 +1,4 @@
+import { demoPaths } from "./demo-registry.js";
 const catalog = document.querySelector("[data-project-catalog]");
 if (catalog) {
   const controls = [...catalog.querySelectorAll("[data-project-filter]")],
@@ -51,11 +52,7 @@ for (const container of document.querySelectorAll("[data-demo-container]")) {
     const url = new URL(load.dataset.loadDemo, location.href);
     if (
       url.origin !== location.origin ||
-      ![
-        "demos/aranhaverso/index.html",
-        "demos/nexusfc/index.html",
-        "demos/hogwarts/index.html",
-      ].includes(load.dataset.loadDemo)
+      !demoPaths.includes(load.dataset.loadDemo)
     ) {
       status.textContent =
         "Demonstração indisponível. Use o link para abrir em outra aba.";

@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mundo Invertido — demonstração | Projeto Invertido</title>
+<meta name="description" content="Atravesse o portal de Hawkins. Explore o Mundo Invertido, conheça o universo de Stranger Things e entre para o clube de D&D.">
+<meta name="theme-color" content="#b50920"><meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="assets/img/banner/stranger-things-logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/site.css?v=20261107-3">
+<link rel="stylesheet" href="assets/css/cinematic.css?v=20261107-3">
+<script src="assets/js/motion-preference.js"></script>
+<script src="assets/js/vendor/gsap.min.js" defer></script>
+<script src="assets/js/site.js?v=20261107-3" defer></script>
+<script src="assets/js/atmosphere.js?v=20261107-3" defer></script>
+<script src="assets/js/seasons.js?v=20261107-3" defer></script><meta name="robots" content="noindex,follow"><link rel="stylesheet" href="../presentation.css"><script src="../presentation.js"></script></head>
+<body class="explore-page" data-world="inverted">
+<a class="skip" href="#main">Ir para o conteúdo</a>
+<header class="site-header">
+<a class="brand" href="index.html" aria-label="Stranger Things — início"><img class="brand-logo" src="assets/img/banner/stranger-things-logo.svg" alt="Stranger Things" width="160" height="58"></a>
+<button class="motion-toggle" data-motion-toggle aria-pressed="false"><svg class="icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg><span>Desativar animações</span></button>
+<button class="menu-toggle" aria-expanded="false" aria-controls="navigation">Menu <svg class="icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+<nav id="navigation" aria-label="Menu principal">
+<a href="index.html" >Início</a>
+<a href="temporadas.html" aria-current="page">Temporadas</a>
+<a href="contact.html" >Contato</a>
+<a class="nav-cta" href="auth_login.html">Área Restrita <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a></nav>
+</header>
+<main id="main" class="seasons-main">
+<section class="season-cinema" aria-labelledby="season-title" data-seasons aria-roledescription="carrossel">
+<div class="season-ambient" aria-hidden="true"><img src="assets/img/seasons/season-1.jpg" alt=""></div>
+<div class="season-heading"><p>Stranger Things <span>As cinco temporadas</span></p><div class="season-arrows"><button type="button" data-season-prev aria-label="Temporada anterior"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg></button><span data-season-counter>01 / 05</span><button type="button" data-season-next aria-label="Próxima temporada"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="m10 6 6 6-6 6"/></svg></button></div></div>
+<div class="season-stage">
+<div class="season-scene" data-season-scene="1" ><img src="assets/img/seasons/season-1.jpg" alt="Lucas, Mike e Dustin na primeira temporada" fetchpriority="high" width="1440" height="810"><div class="season-shade"></div></div>
+<div class="season-scene" data-season-scene="2" hidden><img src="assets/img/seasons/season-2.jpg" alt="Eleven usa seus poderes na segunda temporada" loading="lazy" width="1440" height="810"><div class="season-shade"></div></div>
+<div class="season-scene" data-season-scene="3" hidden><img src="assets/img/content/serie-image-03.png" alt="Eleven, Mike, Will, Lucas e Max na terceira temporada" loading="lazy" width="1440" height="810"><div class="season-shade"></div></div>
+<div class="season-scene" data-season-scene="4" hidden><img src="assets/img/content/serie-image-01.png" alt="Vecna no Mundo Invertido na quarta temporada" loading="lazy" width="1440" height="810"><div class="season-shade"></div></div>
+<div class="season-scene" data-season-scene="5" hidden><img src="assets/img/seasons/season-5.jpg" alt="O grupo de Hawkins diante de um céu vermelho no Mundo Invertido" loading="lazy" width="1440" height="810"><div class="season-shade"></div></div>
+<canvas class="atmosphere" data-rain aria-hidden="true"></canvas>
+<div class="season-copy"><p class="season-meta" data-season-meta>Temporada 1 <span>2016 · 8 episódios</span></p><h1 id="season-title"><span class="title-mask"><span>O começo</span></span><span class="title-mask"><span>do impossível.</span></span></h1><p class="season-intro" data-season-intro>Um garoto desaparece. Uma menina surge na floresta. E Hawkins nunca mais será a mesma.</p><div class="season-actions"><a class="button red" href="#trailer-1" data-hero-trailer><svg class="icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="m8 4 12 8-12 8Z"/></svg>Assistir ao trailer</a><a class="text-link" href="#history-1" data-hero-story>Conheça a história <span aria-hidden="true">↓</span></a></div></div>
+<div class="season-scene-number" aria-hidden="true" data-season-number>01</div>
+</div>
+<div class="season-selector" role="group" aria-label="Escolha a temporada">
+<a class="season-choice active" href="#season-1" data-season="1" data-lines="O começo|do impossível." data-title="O começo do impossível." data-intro="Um garoto desaparece. Uma menina surge na floresta. E Hawkins nunca mais será a mesma." data-year="2016" data-episodes="8" aria-current="true" aria-label="Temporada 1, 2016"><span class="thumb-image"><img src="assets/img/seasons/season-1.jpg" alt="" loading="lazy" width="240" height="135"></span><span class="thumb-caption"><b>01</b><span>Temporada 1<small>2016</small></span><svg class="icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a>
+<a class="season-choice " href="#season-2" data-season="2" data-lines="A sombra|permanece." data-title="A sombra permanece." data-intro="O portal deixou marcas. Agora, uma presença maior observa Hawkins do outro lado." data-year="2017" data-episodes="9" aria-current="false" aria-label="Temporada 2, 2017"><span class="thumb-image"><img src="assets/img/seasons/season-2.jpg" alt="" loading="lazy" width="240" height="135"></span><span class="thumb-caption"><b>02</b><span>Temporada 2<small>2017</small></span><svg class="icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a>
+<a class="season-choice " href="#season-3" data-season="3" data-lines="Um verão.|Tudo muda." data-title="Um verão. Tudo muda." data-intro="Neon, novos amores e o shopping Starcourt. Por baixo de tudo, o perigo está de volta." data-year="2019" data-episodes="8" aria-current="false" aria-label="Temporada 3, 2019"><span class="thumb-image"><img src="assets/img/content/serie-image-03.png" alt="" loading="lazy" width="240" height="135"></span><span class="thumb-caption"><b>03</b><span>Temporada 3<small>2019</small></span><svg class="icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a>
+<a class="season-choice " href="#season-4" data-season="4" data-lines="O relógio|está correndo." data-title="O relógio está correndo." data-intro="Quatro badaladas. Um novo pesadelo. A história de Hawkins é mais sombria do que parece." data-year="2022" data-episodes="9" aria-current="false" aria-label="Temporada 4, 2022"><span class="thumb-image"><img src="assets/img/content/serie-image-01.png" alt="" loading="lazy" width="240" height="135"></span><span class="thumb-caption"><b>04</b><span>Temporada 4<small>2022</small></span><svg class="icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a>
+<a class="season-choice " href="#season-5" data-season="5" data-lines="Uma última|travessia." data-title="Uma última travessia." data-intro="Hawkins está em quarentena. Todos os caminhos levam ao confronto com Vecna." data-year="2025" data-episodes="8" aria-current="false" aria-label="Temporada 5, 2025"><span class="thumb-image"><img src="assets/img/seasons/season-5.jpg" alt="" loading="lazy" width="240" height="135"></span><span class="thumb-caption"><b>05</b><span>Temporada 5<small>2025</small></span><svg class="icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a>
+</div>
+<p class="season-hint">Escolha um capítulo da história.<span>Use também as setas do teclado</span></p>
+<p class="sr-only" aria-live="polite" aria-atomic="true" data-season-announcement></p>
+<p class="season-error" role="status" data-season-error hidden></p>
+</section>
+<div class="season-details">
+<article id="season-1" class="season-detail" data-season-detail="1">
+<section class="season-story" id="history-1"><div><h2>Hawkins, 1983.</h2><p class="story-period">Temporada 1 · 2016 · 8 episódios</p></div><div><p>O desaparecimento de Will Byers transforma a rotina de uma pequena cidade. Enquanto Joyce busca o filho e Hopper investiga o laboratório de Hawkins, Mike, Dustin e Lucas encontram Eleven, uma menina com poderes extraordinários. Uma amizade improvável se torna a chave para um mistério que atravessa as fronteiras do nosso mundo.</p><a class="text-link" href="https://www.netflix.com/tudum/stranger-things" target="_blank" rel="noopener noreferrer">Explore no Netflix Tudum <svg class="icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></div></section>
+<section class="season-trailer" id="trailer-1" aria-labelledby="trailer-title-1"><div class="trailer-header"><h2 id="trailer-title-1">Antes de atravessar,<br>aperte o play.</h2><p>Trailer oficial · Temporada 1<br>Áudio original em inglês.</p></div>
+<div class="season-video" data-trailer-container>
+<div class="trailer-preview" data-video-preview><img src="assets/img/seasons/season-1.jpg" alt="" loading="lazy" width="1280" height="720"><a class="button" href="https://www.youtube.com/watch?v=b9EkMc79ZSU" target="_blank" rel="noopener noreferrer">Trailer no YouTube</a></div>
+</div><p class="video-help">Os trailers podem revelar acontecimentos da temporada. <a href="https://www.netflix.com/tudum/videos/stranger-things-season-1-trailer" target="_blank" rel="noopener noreferrer">Assistir na fonte oficial <svg class="icon" viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></p></section>
+<section class="season-cast" aria-labelledby="cast-title-1"><div class="cast-heading"><h2 id="cast-title-1">Quem atravessa<br>com você.</h2><p>Personagens em destaque.<br>Fotos de divulgação da série.</p></div><div class="cast-grid">
+<figure><img src="assets/img/seasons/season-2.jpg" alt="Eleven em Stranger Things" loading="lazy" width="495" height="279"><figcaption><h3>Eleven</h3><p>Millie Bobby Brown</p></figcaption></figure>
+<figure><img src="assets/img/seasons/dustin.jpg" alt="Dustin Henderson em Stranger Things" loading="lazy" width="495" height="279"><figcaption><h3>Dustin Henderson</h3><p>Gaten Matarazzo</p></figcaption></figure>
+<figure><img src="assets/img/seasons/will.jpg" alt="Will Byers em Stranger Things" loading="lazy" width="495" height="279"><figcaption><h3>Will Byers</h3><p>Noah Schnapp</p></figcaption></figure>
+</div></section>
+</article>
+<article id="season-2" class="season-detail" data-season-detail="2">
+<section class="season-story" id="history-2"><div><h2>Hawkins, 1984.</h2><p class="story-period">Temporada 2 · 2017 · 9 episódios</p></div><div><p>Um ano depois, Will tenta reencontrar seu lugar, mas as visões do Mundo Invertido continuam. A chegada de Max muda a dinâmica do grupo, e uma ameaça toma forma sob Hawkins. Entre segredos do laboratório e a busca de Eleven por sua própria história, os amigos descobrem que voltar para casa não significa deixar a escuridão para trás.</p><a class="text-link" href="https://www.netflix.com/tudum/stranger-things" target="_blank" rel="noopener noreferrer">Explore no Netflix Tudum <svg class="icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></div></section>
+<section class="season-trailer" id="trailer-2" aria-labelledby="trailer-title-2"><div class="trailer-header"><h2 id="trailer-title-2">Antes de atravessar,<br>aperte o play.</h2><p>Trailer oficial · Temporada 2<br>Áudio original em inglês.</p></div>
+<div class="season-video" data-trailer-container>
+<div class="trailer-preview" data-video-preview><img src="assets/img/seasons/season-2.jpg" alt="" loading="lazy" width="1280" height="720"><a class="button" href="https://www.youtube.com/watch?v=R1ZXOOLMJ8s" target="_blank" rel="noopener noreferrer">Trailer no YouTube</a></div>
+</div><p class="video-help">Os trailers podem revelar acontecimentos da temporada. <a href="https://www.netflix.com/tudum/videos/stranger-things-2-trailer" target="_blank" rel="noopener noreferrer">Assistir na fonte oficial <svg class="icon" viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></p></section>
+<section class="season-cast" aria-labelledby="cast-title-2"><div class="cast-heading"><h2 id="cast-title-2">Quem atravessa<br>com você.</h2><p>Personagens em destaque.<br>Fotos de divulgação da série.</p></div><div class="cast-grid">
+<figure><img src="assets/img/seasons/season-2.jpg" alt="Eleven em Stranger Things" loading="lazy" width="495" height="279"><figcaption><h3>Eleven</h3><p>Millie Bobby Brown</p></figcaption></figure>
+<figure><img src="assets/img/seasons/will.jpg" alt="Will Byers em Stranger Things" loading="lazy" width="495" height="279"><figcaption><h3>Will Byers</h3><p>Noah Schnapp</p></figcaption></figure>
+<figure><img src="assets/img/seasons/max.jpg" alt="Max Mayfield em Stranger Things" loading="lazy" width="495" height="279"><figcaption><h3>Max Mayfield</h3><p>Sadie Sink</p></figcaption></figure>
+</div></section>
+</article>
+<article id="season-3" class="season-detail" data-season-detail="3">
+<section class="season-story" id="history-3"><div><h2>Hawkins, 1985.</h2><p class="story-period">Temporada 3 · 2019 · 8 episódios</p></div><div><p>As férias de verão chegam com o brilho do Starcourt, romances e mudanças nas amizades. Mas uma transmissão misteriosa e acontecimentos estranhos levam o grupo a investigar o que se esconde na cidade. Enquanto Dustin encontra novos aliados em Steve e Robin, Eleven e seus amigos percebem que a ameaça do Mundo Invertido ainda está perto.</p><a class="text-link" href="https://www.netflix.com/tudum/stranger-things" target="_blank" rel="noopener noreferrer">Explore no Netflix Tudum <svg class="icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></div></section>
+<section class="season-trailer" id="trailer-3" aria-labelledby="trailer-title-3"><div class="trailer-header"><h2 id="trailer-title-3">Antes de atravessar,<br>aperte o play.</h2><p>Trailer final · Temporada 3<br>Áudio original em inglês.</p></div>
+<div class="season-video" data-trailer-container>
+<div class="trailer-preview" data-video-preview><img src="assets/img/content/serie-image-03.png" alt="" loading="lazy" width="1280" height="720"><a class="button" href="https://www.youtube.com/watch?v=s6Eum1-6sB0" target="_blank" rel="noopener noreferrer">Trailer no YouTube</a></div>
+</div><p class="video-help">Trailer Netflix · Reprodução: 123 Trailers. <a href="https://www.netflix.com/title/80057281" target="_blank" rel="noopener noreferrer">Assistir na fonte oficial <svg class="icon" viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></p></section>
+<section class="season-cast" aria-labelledby="cast-title-3"><div class="cast-heading"><h2 id="cast-title-3">Quem atravessa<br>com você.</h2><p>Personagens em destaque.<br>Fotos de divulgação da série.</p></div><div class="cast-grid">
+<figure><img src="assets/img/seasons/season-2.jpg" alt="Eleven em Stranger Things" loading="lazy" width="495" height="279"><figcaption><h3>Eleven</h3><p>Millie Bobby Brown</p></figcaption></figure>
+<figure><img src="assets/img/seasons/dustin.jpg" alt="Dustin Henderson em Stranger Things" loading="lazy" width="495" height="279"><figcaption><h3>Dustin Henderson</h3><p>Gaten Matarazzo</p></figcaption></figure>
+<figure><img src="assets/img/seasons/robin-steve.jpg" alt="Robin &amp; Steve em Stranger Things" loading="lazy" width="495" height="279"><figcaption><h3>Robin &amp; Steve</h3><p>Maya Hawke &amp; Joe Keery</p></figcaption></figure>
+</div></section>
+</article>
+<article id="season-4" class="season-detail" data-season-detail="4">
+<section class="season-story" id="history-4"><div><h2>Hawkins, 1986.</h2><p class="story-period">Temporada 4 · 2022 · 9 episódios</p></div><div><p>Separados pela distância e pelas consequências da batalha de Starcourt, os amigos encaram o ensino médio e uma nova onda de acontecimentos aterrorizantes. Em Hawkins, o passado da família Creel oferece pistas sobre Vecna. Longe dali, Eleven precisa revisitar suas origens. Música, memória e amizade se tornam parte de uma luta que atravessa continentes.</p><a class="text-link" href="https://www.netflix.com/tudum/stranger-things" target="_blank" rel="noopener noreferrer">Explore no Netflix Tudum <svg class="icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></div></section>
+<section class="season-trailer" id="trailer-4" aria-labelledby="trailer-title-4"><div class="trailer-header"><h2 id="trailer-title-4">Antes de atravessar,<br>aperte o play.</h2><p>Trailer oficial · Temporada 4 · Volume 2<br>Áudio em português.</p></div>
+<div class="season-video" data-trailer-container>
+<p class="demo-media-note">Mídia disponível na aplicação original; esta demo prioriza navegação e interação.</p>
+</div><p class="video-help">Os trailers podem revelar acontecimentos da temporada. <a href="https://www.netflix.com/tudum/videos/stranger-things-4-volume-2-trailer" target="_blank" rel="noopener noreferrer">Assistir na fonte oficial <svg class="icon" viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></p></section>
+<section class="season-cast" aria-labelledby="cast-title-4"><div class="cast-heading"><h2 id="cast-title-4">Quem atravessa<br>com você.</h2><p>Personagens em destaque.<br>Fotos de divulgação da série.</p></div><div class="cast-grid">
+<figure><img src="assets/img/seasons/max.jpg" alt="Max Mayfield em Stranger Things" loading="lazy" width="495" height="279"><figcaption><h3>Max Mayfield</h3><p>Sadie Sink</p></figcaption></figure>
+<figure><img src="assets/img/content/serie-image-01.png" alt="Vecna em Stranger Things" loading="lazy" width="495" height="279"><figcaption><h3>Vecna</h3><p>Jamie Campbell Bower</p></figcaption></figure>
+<figure><img src="assets/img/seasons/season-2.jpg" alt="Eleven em Stranger Things" loading="lazy" width="495" height="279"><figcaption><h3>Eleven</h3><p>Millie Bobby Brown</p></figcaption></figure>
+</div></section>
+</article>
+<article id="season-5" class="season-detail" data-season-detail="5">
+<section class="season-story" id="history-5"><div><h2>Hawkins, 1987.</h2><p class="story-period">Temporada 5 · 2025 · 8 episódios</p></div><div><p>Com as fronteiras entre os mundos cada vez mais frágeis, Hawkins vive sob controle militar. O grupo se reúne para encontrar Vecna, enquanto Eleven volta a ser perseguida. A ligação de Will com o outro lado ganha importância, e a amizade que começou em uma mesa de D&amp;D é colocada à prova na última temporada da série.</p><a class="text-link" href="https://www.netflix.com/tudum/stranger-things" target="_blank" rel="noopener noreferrer">Explore no Netflix Tudum <svg class="icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></div></section>
+<section class="season-trailer" id="trailer-5" aria-labelledby="trailer-title-5"><div class="trailer-header"><h2 id="trailer-title-5">Antes de atravessar,<br>aperte o play.</h2><p>Trailer oficial · Temporada 5<br>Áudio em português.</p></div>
+<div class="season-video" data-trailer-container>
+<div class="trailer-preview" data-video-preview><img src="assets/img/seasons/season-5.jpg" alt="" loading="lazy" width="1280" height="720"><a class="button" href="https://www.youtube.com/watch?v=Wb3kaP580kA" target="_blank" rel="noopener noreferrer">Trailer no YouTube</a></div>
+</div><p class="video-help">Os trailers podem revelar acontecimentos da temporada. <a href="https://www.netflix.com/tudum/pt-br/videos/trailer-da-temporada-5-de-stranger-things" target="_blank" rel="noopener noreferrer">Assistir na fonte oficial <svg class="icon" viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></p></section>
+<section class="season-cast" aria-labelledby="cast-title-5"><div class="cast-heading"><h2 id="cast-title-5">Quem atravessa<br>com você.</h2><p>Personagens em destaque.<br>Fotos de divulgação da série.</p></div><div class="cast-grid">
+<figure><img src="assets/img/seasons/will.jpg" alt="Will Byers em Stranger Things" loading="lazy" width="495" height="279"><figcaption><h3>Will Byers</h3><p>Noah Schnapp</p></figcaption></figure>
+<figure><img src="assets/img/seasons/season-2.jpg" alt="Eleven em Stranger Things" loading="lazy" width="495" height="279"><figcaption><h3>Eleven</h3><p>Millie Bobby Brown</p></figcaption></figure>
+<figure><img src="assets/img/seasons/dustin.jpg" alt="Dustin Henderson em Stranger Things" loading="lazy" width="495" height="279"><figcaption><h3>Dustin Henderson</h3><p>Gaten Matarazzo</p></figcaption></figure>
+</div></section>
+</article>
+</div>
+</main>
+<div class="footer-curtain" data-footer-reveal>
+<footer class="site-footer cinematic-footer">
+<div class="footer-marquee" aria-hidden="true"><div><span>AMIGOS NÃO MENTEM.</span><span>HAWKINS VIVE EM NÓS.</span><span>O OUTRO LADO CHAMA.</span><span>AMIGOS NÃO MENTEM.</span><span>HAWKINS VIVE EM NÓS.</span><span>O OUTRO LADO CHAMA.</span></div></div>
+<div class="footer-center"><h2>O portal continua<br>aberto.</h2><div class="footer-links"><a class="button" href="temporadas.html">Explore as temporadas <svg class="icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="index.html#clube">Entre para o clube</a><a href="contact.html">Fale com a gente</a></div></div>
+<div class="footer-giant" aria-hidden="true">INVERTIDO</div>
+<div class="footer-bottom"><a class="brand" href="index.html">MUNDO<br>INVERTIDO</a><p>Projeto acadêmico · LP3 / ETEJK<br><span>Base didática: DIO. Projeto de fã, sem vínculo com a Netflix.<br>Stranger Things e suas imagens pertencem aos seus titulares.</span></p><a class="back-top" href="#main" aria-label="Voltar ao início do conteúdo"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="m5 10 7-7 7 7M12 3v18"/></svg></a></div>
+</footer></div>
+<p class="demo-media-note">Mídia disponível na aplicação original; esta demo prioriza navegação e interação.</p>
+<div class="world-switch-flash" aria-hidden="true"></div>
+<aside class="demo-presentation-note"><a href="../../mundo-invertido.html" target="_blank" rel="noopener noreferrer">Ver estudo de caso</a><span>Demo navegável · sem backend · formulários não enviam dados</span><button type="button" data-presentation-pause>Pausar movimento</button></aside></body></html>

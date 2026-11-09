@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090909">
+  <meta name="description" content="NexusFC — equipe de desenvolvimento de sites, sistemas web e aplicativos.">
+  <meta name="csrf-token" content="demo-no-server">
+  <title>Cadastro — NexusFC</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="assets/img/nexus-mark.svg" type="image/svg+xml">
+  <script src="assets/js/site.js" defer></script>
+  
+<meta name="robots" content="noindex,follow"><link rel="stylesheet" href="../presentation.css"><script src="../presentation.js"></script></head>
+
+<body class="route-register">
+  <div class="page-transition" data-page-transition aria-hidden="true"><span>NEXUSFC</span></div>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header" data-site-header>
+    <nav class="site-nav" aria-label="Navegação principal">
+      <a class="brand" href="index.html" aria-label="NexusFC — página inicial">
+        <img class="brand__mark" src="assets/img/nexus-mark.svg" alt="" width="32" height="32">
+        <span class="brand__name">NEXUS<span>FC</span></span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-panel" data-nav-toggle>
+        <span class="nav-toggle__label">Menu</span>
+        <span class="nav-toggle__icon" aria-hidden="true"><i></i><i></i></span>
+      </button>
+
+      <div class="nav-panel" id="nav-panel" data-nav-panel>
+        <ul class="nav-links">
+          <li><a href="index.html">Início <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    <path d="M7 17 17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="miter"/>
+  </svg></a></li>
+          <li><a href="sobre.html">Sobre nós <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    <path d="M7 17 17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="miter"/>
+  </svg></a></li>
+          <li><a href="servico.html">Serviços <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    <path d="M7 17 17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="miter"/>
+  </svg></a></li>
+          <li><a href="portfolio.html">Portfólio <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    <path d="M7 17 17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="miter"/>
+  </svg></a></li>
+          <li><a href="contact.html">Contato <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    <path d="M7 17 17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="miter"/>
+  </svg></a></li>
+        </ul>
+
+        <div class="nav-account">
+                      <a class="nav-login" href="auth_login.html">Login <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    <path d="M7 17 17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="miter"/>
+  </svg></a>
+                  </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="conteudo" tabindex="-1">
+<section class="access-page access-page--register" aria-labelledby="access-title">
+  <div class="access-story" aria-hidden="true">
+    <div class="access-story__mark"><span></span><span></span><span></span></div>
+    <p>Uma identidade. Toda a rede.</p>
+    <strong>CRIE.<br>ENTRE.<br>PARTICIPE.</strong>
+    <div class="access-story__status"><i></i> cadastro NexusFC</div>
+  </div>
+  <div class="access-panel">
+    <div class="access-panel__heading"><h1 id="access-title">Sua conexão<br>começa aqui.</h1><p>Crie seu acesso com dados que você reconheça. Todos os campos são obrigatórios.</p></div>
+        <form class="nexus-form" action="account.html" method="post" data-loading-form>
+            <div class="nexus-field-grid">
+        <div class="nexus-field"><label for="register-name">Nome</label><input id="register-name" required maxlength="100" type="text" name="username" autocomplete="name"></div>
+        <div class="nexus-field"><label for="register-phone">Telefone</label><input id="register-phone" required maxlength="20" type="tel" name="phone" autocomplete="tel" inputmode="tel"></div>
+      </div>
+      <div class="nexus-field"><label for="register-email">E-mail</label><input id="register-email" required maxlength="150" type="email" name="email" autocomplete="email" inputmode="email"></div>
+      <div class="nexus-field"><label for="register-password">Senha</label><input id="register-password" required minlength="6" maxlength="128" type="password" name="password" autocomplete="new-password" aria-describedby="password-hint"><small id="password-hint">Use no mínimo 6 caracteres.</small></div>
+      <button class="nexus-submit" type="submit"><span>Criar minha conta</span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    <path d="M7 17 17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="miter"/>
+  </svg></button>
+    </form>
+    <p class="access-switch">Já possui acesso? <a href="auth_login.html">Entrar agora</a></p>
+  </div>
+</section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <a class="brand brand--footer" href="index.html" aria-label="NexusFC — página inicial">
+        <img class="brand__mark" src="assets/img/nexus-mark.svg" alt="" width="32" height="32">
+        <span class="brand__name">NEXUS<span>FC</span></span>
+      </a>
+      <p>Ideias, pessoas e tecnologia<br>conectadas por software.</p>
+      <div class="site-footer__meta">
+        <span>&copy; 2026 NexusFC</span>
+        <a href="contact.html">Inicie uma conversa <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    <path d="M7 17 17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="miter"/>
+  </svg></a>
+      </div>
+    </div>
+  </footer>
+<aside class="demo-presentation-note"><a href="../../ciberfolio.html" target="_blank" rel="noopener noreferrer">Ver estudo de caso</a><span>Demo navegável · sem backend · formulários não enviam dados</span><button type="button" data-presentation-pause>Pausar movimento</button></aside></body>
+</html>

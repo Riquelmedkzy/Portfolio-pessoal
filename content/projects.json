@@ -25,7 +25,8 @@
     "architecture": "Front Controller em index.php, controllers separados, models com MySQLi e consultas preparadas e views para home e detalhes dos filmes. JavaScript controla a troca de protagonistas, filtros e modais; CSS organiza a composição responsiva.",
     "process": "O README registra a reforma visual da home, filmografia e detalhes, preservando a arquitetura MVC e as rotas do projeto. A sequência completa do desenvolvimento ainda não está documentada.",
     "demo": "demos/aranhaverso/index.html",
-    "listed": true
+    "listed": true,
+    "demoNote": "Demo visual navegável exportada dos templates do projeto: universos, filtros, filmes e galerias. PHP e MySQL não são executados nesta demo."
   },
   {
     "slug": "lista-tarefas",
@@ -49,7 +50,9 @@
     "type": "mobile",
     "architecture": "Aplicativo Android em React Native, Expo e TypeScript. O repositório público contém apenas a distribuição. A organização interna dos módulos e as decisões de persistência não estão documentadas publicamente.",
     "process": "A documentação pública registra a reconstrução e ampliação do aplicativo na versão 2.0 beta. O histórico interno de desenvolvimento não está disponível.",
-    "listed": true
+    "listed": true,
+    "demo": "demos/lista-tarefas/index.html",
+    "demoNote": "Adaptação web interativa dos fluxos documentados do aplicativo Android. Use tarefas fictícias para criar, editar, concluir, excluir e filtrar. A interface não é uma captura ou execução do app nativo; os dados ficam somente nesta aba."
   },
   {
     "slug": "nexusfc",
@@ -79,7 +82,8 @@
     "type": "web",
     "architecture": "Front Controller com lista explícita de rotas, controllers de autenticação e autorização, models com consultas preparadas e transações e views do portal e dos painéis. MySQL/MariaDB armazena o conteúdo.",
     "process": "Construído no contexto do TCC do curso técnico. A documentação descreve instalação local e verificações de sintaxe; o cronograma e a sequência das etapas ainda não estão documentados.",
-    "listed": true
+    "listed": true,
+    "demoNote": "Protótipo visual navegável. Notícias ilustrativas; autenticação, persistência e administração do backend não estão ativas."
   },
   {
     "slug": "hogwarts",
@@ -104,7 +108,8 @@
     "repository": "https://github.com/Riquelmedkzy/projhogwarts",
     "architecture": "A organização interna e as decisões técnicas ainda não estão documentadas no catálogo.",
     "process": "Etapas e cronograma ainda não documentados.",
-    "listed": true
+    "listed": true,
+    "demoNote": "Demo HTML navegável das quatro casas. A navegação é funcional; os recursos do backend PHP/MySQL não são executados."
   },
   {
     "slug": "sexta-feira",
@@ -144,14 +149,16 @@
     ],
     "challenge": "Organizar conteúdo de apresentação e serviços em um site com múltiplas páginas.",
     "solution": "Páginas PHP e persistência em MySQL, conforme a documentação do catálogo original.",
-    "outcome": "A aplicação depende de configuração própria. Demonstração pública ainda não disponível.",
+    "outcome": "A aplicação depende de configuração própria. A interface pode ser explorada na demo visual do portfólio.",
     "featured": false,
     "status": "completed",
     "type": "web",
     "repository": "https://github.com/Riquelmedkzy/ciberfolio",
     "architecture": "A organização interna e as decisões técnicas ainda não estão documentadas no catálogo.",
     "process": "Etapas e cronograma ainda não documentados.",
-    "listed": true
+    "listed": true,
+    "demo": "demos/ciberfolio/index.html",
+    "demoNote": "Demo navegável das páginas originais de apresentação, serviços, portfólio e contato. Formulários são ilustrativos; não criam contas nem enviam mensagens."
   },
   {
     "slug": "gestao-compras",
@@ -166,13 +173,15 @@
     ],
     "challenge": "Estruturar o acesso e a organização dos dados de usuários.",
     "solution": "Controladores e páginas para cadastro, autenticação e perfil, conforme a documentação do catálogo original.",
-    "outcome": "A aplicação depende de configuração e banco próprios. Demonstração pública ainda não disponível.",
+    "outcome": "A aplicação depende de configuração e banco próprios. A interface pode ser explorada na demo visual do portfólio.",
     "featured": false,
     "status": "completed",
     "type": "web",
     "architecture": "A organização interna e as decisões técnicas ainda não estão documentadas no catálogo.",
     "process": "Etapas e cronograma ainda não documentados.",
-    "listed": true
+    "listed": true,
+    "demo": "demos/gestao-compras/index.html",
+    "demoNote": "Prévia navegável dos templates originais de cadastro, acesso e perfil, com uma moldura visual para a demonstração. O perfil usa dados fictícios; autenticação, recuperação de senha e uploads não são executados."
   },
   {
     "slug": "mundo-invertido",
@@ -190,14 +199,16 @@
     ],
     "challenge": "O README não descreve um desafio específico enfrentado durante o desenvolvimento.",
     "solution": "Aplicação PHP com MVC, MySQL/MariaDB e áreas públicas e autenticadas. Créditos da base DIO e dos recursos visuais estão no repositório.",
-    "outcome": "Código e instruções locais disponíveis. Ainda sem demonstração pública integrada.",
+    "outcome": "Código e instruções locais disponíveis. A interface pode ser explorada na demo visual do portfólio.",
     "repository": "https://github.com/Riquelmedkzy/Mundo-Invertido",
     "featured": false,
     "status": "completed",
     "type": "web",
     "architecture": "Aplicação PHP com MVC, MySQL/MariaDB e áreas públicas e autenticadas. Créditos da base DIO e dos recursos visuais estão no repositório.",
     "process": "Consulte o README para instalação e verificações. A sequência completa de desenvolvimento ainda não está documentada.",
-    "listed": true
+    "listed": true,
+    "demo": "demos/mundo-invertido/index.html",
+    "demoNote": "Demo navegável da interface original com troca de mundos e exploração das temporadas. Cadastro, login e mensagens são apenas prévias de formulário, sem envio de dados ou backend."
   },
   {
     "slug": "pokelab",
@@ -214,13 +225,18 @@
     ],
     "challenge": "A documentação registra a necessidade de impedir duplicatas e conflitos ao salvar equipes em diferentes abas.",
     "solution": "Catálogo em JSON, contas e equipes em SQLite, consultas parametrizadas, CSRF e controle de versão da equipe.",
-    "outcome": "Código e testes de integração documentados; execução local com PHP 8.1+. Ainda sem demonstração pública integrada.",
+    "outcome": "Código e testes de integração documentados; execução local com PHP 8.1+. A interface pode ser explorada na demo visual do portfólio.",
     "repository": "https://github.com/Riquelmedkzy/pokelab",
     "featured": true,
     "status": "completed",
     "type": "web",
     "architecture": "Catálogo em JSON, contas e equipes em SQLite, consultas parametrizadas, CSRF e controle de versão da equipe.",
     "process": "Consulte o README para instalação e verificações. A sequência completa de desenvolvimento ainda não está documentada.",
-    "listed": true
+    "listed": true,
+    "demo": "demos/pokelab/index.html",
+    "demoNote": "Demo navegável exportada da interface original: 54 fichas, 18 elementos, busca e montador de cinco integrantes. A equipe é um rascunho do navegador; contas e gravação no SQLite não estão ativas.",
+    "image": "assets/images/pokelab-desktop.jpg",
+    "imageAlt": "Interface real da demonstração navegável do PokéLab",
+    "imageNote": "Capturas da demo exportada dos templates originais, em computador e celular. O catálogo e o montador funcionam no navegador; contas e SQLite não estão ativos."
   }
 ]

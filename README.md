@@ -97,3 +97,7 @@ Abra http://127.0.0.1:8765/habilidades.html. O servidor serve apenas `dist`, com
 Testes de navegador opcionais: `npx playwright install chromium`, inicie a prévia e execute `npm run test:browser`. `CHROME_PATH` seleciona um Chromium/Chrome já instalado; `PREVIEW_URL` permite outro endereço local; `PLAYWRIGHT_MODULE` pode selecionar uma instalação existente. Os testes executam verificações WCAG com axe-core, além dos fluxos funcionais, e salvam o relatório em `.local/playground/`.
 
 Nenhuma publicação automática faz parte desta entrega. Demos são experiências visuais navegáveis e não executam o backend dos projetos. Repositórios privados permanecem protegidos.
+
+### Demonstrações de todos os projetos exibidos
+
+Os oito projetos selecionados têm demos carregadas sob demanda, incluindo catálogo/montador do PokéLab e uma adaptação web claramente identificada do ListaTarefas. Recursos de autenticação, banco e envio de mensagens não são executados nessas prévias. Veja [origens, limites e testes das demos](docs/project-demos.md). Com a prévia aberta, `npm run test:demos` verifica as interações em Playwright.

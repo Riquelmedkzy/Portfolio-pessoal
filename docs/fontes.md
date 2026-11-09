@@ -27,3 +27,7 @@
 - A demo preserva os textos do projeto, incluindo o capítulo de 2026 e as artes conceituais identificadas como não oficiais. Não é uma fonte de notícias de cinema. Recursos pertencem aos respectivos titulares.
 - A demo contém somente HTML, CSS, JavaScript e imagens. Não inclui conexão PHP, configurações, SQL, logs, credenciais ou serviços privados. Galeria usa o dialog local do projeto; trailers abrem explicitamente no YouTube. Não foram adicionadas bibliotecas externas à demo.
 - Os sete projetos originais e seus endereços foram preservados. “Estado não informado” significa que a documentação não confirma conclusão ou desenvolvimento; somente o beta do ListaTarefas é afirmado. Campos ausentes nos estudos técnicos são indicados, sem supor cronogramas, métricas ou escolhas internas de projetos privados.
+
+## Demos para todos os projetos exibidos
+
+Consulte `docs/project-demos.md` para origens e limites das cinco novas demos. O PokéLab agora usa capturas reais de sua demonstração exportada nos mockups desktop/mobile. A versão web de ListaTarefas é uma adaptação com dados fictícios escrita para o portfólio; não compartilha código ou assets do app privado. Os demais exports usam somente apresentações públicas, sem dados de contas. Nenhum banco, log, configuração de conexão ou upload foi copiado. A contagem e as limitações anteriores sobre ausência de demos são históricas e foram atualizadas no catálogo.
