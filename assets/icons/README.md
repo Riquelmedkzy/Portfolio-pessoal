@@ -21,3 +21,5 @@ O repositório Simple Icons declara [**CC0 1.0**](https://github.com/simple-icon
 MySQLi não possui ícone próprio na lista usada: a página mostra o símbolo PHP e mantém o rótulo **MySQLi**. React Native usa o símbolo React, com o nome **React Native** escrito ao lado. Os dois arquivos ficam disponíveis localmente para esses usos.
 
 O campo de licença sem informação permanece **não confirmado**; ele não foi tratado como CC0 nem como autorização de uso da marca. A licença declarada para PHP requer atribuição e compartilhamento pela mesma licença; o catálogo declara MIT para o ícone JavaScript. Antes de uma publicação pública, confirme as permissões e regras de marca dos respectivos titulares, especialmente para os nove ícones sem licença individual indicada.
+
+Digital Playground: marca GitHub em SVG monocromático reconhecível e símbolo simplificado XAMPP desenhado localmente; marcas pertencem aos seus titulares.

@@ -1,0 +1,373 @@
+{
+  "categories": [
+    {
+      "id": "languages",
+      "name": "Linguagens"
+    },
+    {
+      "id": "frontend",
+      "name": "Front-end"
+    },
+    {
+      "id": "backend",
+      "name": "Back-end"
+    },
+    {
+      "id": "database",
+      "name": "Bancos de dados"
+    },
+    {
+      "id": "mobile",
+      "name": "Mobile"
+    },
+    {
+      "id": "tools",
+      "name": "Ferramentas"
+    }
+  ],
+  "technologies": [
+    {
+      "id": "javascript",
+      "name": "JavaScript",
+      "icon": "javascript",
+      "category": "languages",
+      "color": "#f7df1e",
+      "x": 50,
+      "y": 25,
+      "description": "Interações e comportamento das interfaces no navegador.",
+      "application": "Troca de protagonistas, filtros e modais no Aranhaverso.",
+      "projects": [
+        "aranhaverso",
+        "nexusfc",
+        "ciberfolio",
+        "mundo-invertido",
+        "pokelab"
+      ]
+    },
+    {
+      "id": "css",
+      "name": "CSS",
+      "icon": "css",
+      "category": "frontend",
+      "color": "#55a9ff",
+      "x": 22,
+      "y": 16,
+      "description": "Estilos, composição e adaptação da interface a diferentes telas.",
+      "application": "Composição cinematográfica e layouts responsivos.",
+      "projects": [
+        "aranhaverso",
+        "nexusfc",
+        "hogwarts",
+        "ciberfolio",
+        "mundo-invertido",
+        "pokelab"
+      ]
+    },
+    {
+      "id": "html",
+      "name": "HTML",
+      "icon": "html5",
+      "category": "frontend",
+      "color": "#f0805a",
+      "x": 10,
+      "y": 40,
+      "description": "Estrutura semântica das páginas da web.",
+      "application": "Páginas temáticas das casas de Hogwarts.",
+      "projects": [
+        "hogwarts"
+      ]
+    },
+    {
+      "id": "php",
+      "name": "PHP",
+      "icon": "php",
+      "category": "backend",
+      "color": "#a6a8ef",
+      "x": 76,
+      "y": 35,
+      "description": "Linguagem de servidor para aplicações web.",
+      "application": "MVC, roteamento, autenticação e apresentação de conteúdo.",
+      "projects": [
+        "aranhaverso",
+        "nexusfc",
+        "hogwarts",
+        "ciberfolio",
+        "gestao-compras",
+        "mundo-invertido",
+        "pokelab"
+      ]
+    },
+    {
+      "id": "mysqli",
+      "name": "MySQLi",
+      "icon": "php",
+      "category": "backend",
+      "color": "#a6a8ef",
+      "x": 90,
+      "y": 15,
+      "description": "Extensão PHP para comunicação com MySQL.",
+      "application": "Consultas preparadas no portal NexusFC.",
+      "projects": [
+        "nexusfc"
+      ]
+    },
+    {
+      "id": "mysql",
+      "name": "MySQL",
+      "icon": "mysql",
+      "category": "database",
+      "color": "#65b6db",
+      "x": 82,
+      "y": 61,
+      "description": "Banco relacional para dados estruturados.",
+      "application": "Conteúdo de filmes, notícias e dados de aplicações PHP.",
+      "projects": [
+        "aranhaverso",
+        "nexusfc",
+        "hogwarts",
+        "ciberfolio",
+        "gestao-compras",
+        "mundo-invertido"
+      ]
+    },
+    {
+      "id": "mariadb",
+      "name": "MariaDB",
+      "icon": "mariadb",
+      "category": "database",
+      "color": "#cfaa86",
+      "x": 93,
+      "y": 83,
+      "description": "Banco relacional compatível com o ecossistema MySQL.",
+      "application": "Execução dos bancos acadêmicos em ambiente XAMPP.",
+      "projects": [
+        "nexusfc",
+        "mundo-invertido"
+      ]
+    },
+    {
+      "id": "sqlite",
+      "name": "SQLite",
+      "icon": "sqlite",
+      "category": "database",
+      "color": "#70c9ee",
+      "x": 65,
+      "y": 84,
+      "description": "Banco relacional em arquivo.",
+      "application": "Memória local da Sexta-Feira e contas/equipes do PokéLab.",
+      "projects": [
+        "sexta-feira",
+        "pokelab"
+      ]
+    },
+    {
+      "id": "python",
+      "name": "Python",
+      "icon": "python",
+      "category": "languages",
+      "color": "#f4ce5e",
+      "x": 46,
+      "y": 70,
+      "description": "Linguagem usada na construção de ferramentas e aplicações locais.",
+      "application": "Assistente de terminal com voz opcional e dados locais.",
+      "projects": [
+        "sexta-feira"
+      ]
+    },
+    {
+      "id": "typescript",
+      "name": "TypeScript",
+      "icon": "typescript",
+      "category": "languages",
+      "color": "#64a9f1",
+      "x": 26,
+      "y": 44,
+      "description": "JavaScript com um sistema de tipos.",
+      "application": "Desenvolvimento do aplicativo Android ListaTarefas.",
+      "projects": [
+        "lista-tarefas"
+      ]
+    },
+    {
+      "id": "react-native",
+      "name": "React Native",
+      "icon": "react",
+      "category": "mobile",
+      "color": "#61dafb",
+      "x": 27,
+      "y": 72,
+      "description": "Interfaces nativas construídas com componentes React.",
+      "application": "Criação, edição, filtros e acompanhamento de tarefas no Android.",
+      "projects": [
+        "lista-tarefas"
+      ]
+    },
+    {
+      "id": "expo",
+      "name": "Expo",
+      "icon": "expo",
+      "category": "mobile",
+      "color": "#c4c3ff",
+      "x": 9,
+      "y": 87,
+      "description": "Ferramentas para desenvolvimento e distribuição mobile.",
+      "application": "Base de desenvolvimento do ListaTarefas com React Native.",
+      "projects": [
+        "lista-tarefas"
+      ]
+    },
+    {
+      "id": "github",
+      "name": "GitHub",
+      "icon": "github",
+      "category": "tools",
+      "color": "#d5deed",
+      "x": 50,
+      "y": 10,
+      "description": "Repositórios e distribuição de código e versões.",
+      "application": "Código público dos projetos e distribuição beta do ListaTarefas.",
+      "projects": [
+        "aranhaverso",
+        "nexusfc",
+        "lista-tarefas",
+        "hogwarts",
+        "ciberfolio",
+        "mundo-invertido",
+        "pokelab"
+      ]
+    },
+    {
+      "id": "xampp",
+      "name": "XAMPP",
+      "icon": "xampp",
+      "category": "tools",
+      "color": "#fb9763",
+      "x": 60,
+      "y": 48,
+      "description": "Ambiente local com Apache, PHP e banco de dados.",
+      "application": "Instalação local documentada dos projetos PHP.",
+      "projects": [
+        "aranhaverso",
+        "nexusfc",
+        "hogwarts",
+        "ciberfolio",
+        "mundo-invertido"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "source": "javascript",
+      "target": "css",
+      "reason": "Interação e apresentação no Aranhaverso"
+    },
+    {
+      "source": "javascript",
+      "target": "php",
+      "reason": "Interface e aplicação MVC do Aranhaverso"
+    },
+    {
+      "source": "html",
+      "target": "css",
+      "reason": "Estrutura e apresentação no Hogwarts"
+    },
+    {
+      "source": "php",
+      "target": "mysql",
+      "reason": "Camada de dados das aplicações PHP"
+    },
+    {
+      "source": "php",
+      "target": "mysqli",
+      "reason": "Acesso a dados do NexusFC"
+    },
+    {
+      "source": "mysqli",
+      "target": "mysql",
+      "reason": "Consultas preparadas no NexusFC"
+    },
+    {
+      "source": "mysql",
+      "target": "mariadb",
+      "reason": "Compatibilidade documentada no NexusFC"
+    },
+    {
+      "source": "python",
+      "target": "sqlite",
+      "reason": "Memória local da Sexta-Feira"
+    },
+    {
+      "source": "php",
+      "target": "sqlite",
+      "reason": "Contas e equipes no PokéLab"
+    },
+    {
+      "source": "typescript",
+      "target": "react-native",
+      "reason": "Tipos usados no ListaTarefas"
+    },
+    {
+      "source": "react-native",
+      "target": "expo",
+      "reason": "Desenvolvimento mobile no ListaTarefas"
+    },
+    {
+      "source": "php",
+      "target": "xampp",
+      "reason": "Execução local dos projetos MVC"
+    },
+    {
+      "source": "mysql",
+      "target": "xampp",
+      "reason": "Banco no ambiente XAMPP"
+    },
+    {
+      "source": "github",
+      "target": "php",
+      "reason": "Distribuição do código dos projetos PHP"
+    },
+    {
+      "source": "github",
+      "target": "expo",
+      "reason": "Distribuição beta do ListaTarefas"
+    }
+  ],
+  "experiments": [
+    {
+      "id": "ui",
+      "name": "UI Playground",
+      "description": "Ajuste os detalhes. Veja a interface responder.",
+      "technologies": [
+        "CSS",
+        "JavaScript"
+      ],
+      "category": "Interface",
+      "module": "ui",
+      "status": "ready"
+    },
+    {
+      "id": "animation",
+      "name": "Animation Playground",
+      "description": "Explore o movimento e controle o tempo.",
+      "technologies": [
+        "CSS",
+        "SVG",
+        "Web Animations API"
+      ],
+      "category": "Movimento",
+      "module": "animation",
+      "status": "ready"
+    },
+    {
+      "id": "terminal",
+      "name": "Terminal interativo",
+      "description": "Um outro caminho para explorar o portfólio.",
+      "technologies": [
+        "JavaScript"
+      ],
+      "category": "Navegação",
+      "module": "terminal",
+      "status": "ready"
+    }
+  ]
+}
