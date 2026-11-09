@@ -14,7 +14,7 @@
     ],
     "challenge": "Explorar animação, composição e identidade visual sem perder a clareza ao navegar entre diferentes universos cinematográficos.",
     "solution": "Uma apresentação cinematográfica com alternância entre protagonistas, catálogo de filmes e páginas de detalhes com sinopse, trailers e galerias. A aplicação organiza a navegação em PHP com arquitetura MVC.",
-    "outcome": "O projeto reúne estudo visual e desenvolvimento web em uma experiência navegável. O repositório contém o código e as instruções para executar a aplicação com seu banco próprio.",
+    "outcome": "O projeto reúne estudo visual e desenvolvimento web em uma experiência navegável. A demo deste portfólio exporta os templates e dados de apresentação, com navegação e interações; o backend PHP/MySQL está disponível no repositório para execução local.",
     "repository": "https://github.com/Riquelmedkzy/projaranhaverso",
     "image": "assets/images/aranhaverso-desktop.jpg",
     "imageAlt": "Interface do Aranhaverso em computador",
@@ -23,7 +23,8 @@
     "status": "unknown",
     "type": "web",
     "architecture": "Front Controller em index.php, controllers separados, models com MySQLi e consultas preparadas e views para home e detalhes dos filmes. JavaScript controla a troca de protagonistas, filtros e modais; CSS organiza a composição responsiva.",
-    "process": "O README registra a reforma visual da home, filmografia e detalhes, preservando a arquitetura MVC e as rotas do projeto. A sequência completa do desenvolvimento ainda não está documentada."
+    "process": "O README registra a reforma visual da home, filmografia e detalhes, preservando a arquitetura MVC e as rotas do projeto. A sequência completa do desenvolvimento ainda não está documentada.",
+    "demo": "demos/aranhaverso/index.html"
   },
   {
     "slug": "lista-tarefas",
