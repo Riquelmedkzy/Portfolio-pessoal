@@ -1,8 +1,75 @@
-export const terminalCommands=Object.freeze({help:null,about:'sobre.html',skills:'habilidades.html',projects:'projetos.html',lab:'lab.html#ui',contact:'contato.html',clear:null});
-export function mount(panel){
- const output=panel.querySelector('[data-terminal-output]'),input=panel.querySelector('input'),form=panel.querySelector('[data-terminal-form]');const history=[];let cursor=0,draft='';
- function line(text){const p=document.createElement('p');p.textContent=text;output.append(p);while(output.children.length>80)output.firstElementChild.remove();output.scrollTop=output.scrollHeight;}
- function execute(value){const command=value.trim().toLowerCase().slice(0,80);if(!command)return;history.push(command);if(history.length>50)history.shift();cursor=history.length;draft='';input.value='';if(command==='clear'){output.replaceChildren();return;}line(`riquelme ~ $ ${command}`);if(!Object.hasOwn(terminalCommands,command)){line('Comando não reconhecido. Digite help para ver os comandos disponíveis.');return;}if(command==='help'){line('help — mostrar os comandos\nabout — conhecer Riquelme\nskills — explorar o Tech Ecosystem\nprojects — abrir os projetos\nlab — abrir UI Playground\ncontact — abrir os contatos\nclear — limpar este terminal');return;}line(`Abrindo ${command}…`);location.assign(terminalCommands[command]);}
- form.addEventListener('submit',e=>{e.preventDefault();execute(input.value);});panel.querySelectorAll('[data-command]').forEach(b=>b.addEventListener('click',()=>{execute(b.dataset.command);input.focus();}));
- input.addEventListener('keydown',e=>{if(e.key==='ArrowUp'){e.preventDefault();if(cursor===history.length)draft=input.value;cursor=Math.max(0,cursor-1);input.value=history[cursor]||draft;}else if(e.key==='ArrowDown'){e.preventDefault();cursor=Math.min(history.length,cursor+1);input.value=cursor===history.length?draft:history[cursor];}});return {};
+export const terminalCommands = Object.freeze({
+  help: null,
+  about: "sobre.html",
+  skills: "habilidades.html",
+  projects: "projetos.html",
+  lab: "lab.html#ui",
+  contact: "contato.html",
+  clear: null,
+});
+export function mount(panel) {
+  const output = panel.querySelector("[data-terminal-output]"),
+    input = panel.querySelector("input"),
+    form = panel.querySelector("[data-terminal-form]");
+  const history = [];
+  let cursor = 0,
+    draft = "";
+  function line(text) {
+    const p = document.createElement("p");
+    p.textContent = text;
+    output.append(p);
+    while (output.children.length > 80) output.firstElementChild.remove();
+    output.scrollTop = output.scrollHeight;
+  }
+  function execute(value) {
+    const command = value.trim().toLowerCase().slice(0, 80);
+    if (!command) return;
+    history.push(command);
+    if (history.length > 50) history.shift();
+    cursor = history.length;
+    draft = "";
+    input.value = "";
+    if (command === "clear") {
+      output.replaceChildren();
+      return;
+    }
+    line(`riquelme ~ $ ${command}`);
+    if (!Object.hasOwn(terminalCommands, command)) {
+      line(
+        "Comando não reconhecido. Digite help para ver os comandos disponíveis.",
+      );
+      return;
+    }
+    if (command === "help") {
+      line(
+        "help — mostrar os comandos\nabout — conhecer Riquelme\nskills — explorar o Tech Ecosystem\nprojects — abrir os projetos\nlab — abrir UI Playground\ncontact — abrir os contatos\nclear — limpar este terminal",
+      );
+      return;
+    }
+    line(`Abrindo ${command}…`);
+    location.assign(terminalCommands[command]);
+  }
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    execute(input.value);
+  });
+  panel.querySelectorAll("[data-command]").forEach((b) =>
+    b.addEventListener("click", () => {
+      execute(b.dataset.command);
+      input.focus();
+    }),
+  );
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowUp") {
+      e.preventDefault();
+      if (cursor === history.length) draft = input.value;
+      cursor = Math.max(0, cursor - 1);
+      input.value = history[cursor] || draft;
+    } else if (e.key === "ArrowDown") {
+      e.preventDefault();
+      cursor = Math.min(history.length, cursor + 1);
+      input.value = cursor === history.length ? draft : history[cursor];
+    }
+  });
+  return {};
 }

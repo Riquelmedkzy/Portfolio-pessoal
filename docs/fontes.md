@@ -17,3 +17,13 @@
 - ListaTarefas: usuário informou não ter capturas. Capa editorial identificada; não contém telas fictícias do aplicativo.
 - Referência de movimento: https://www.alissonlimadev.com/ observada no navegador. Partículas, flutuação, faixa contínua e respostas ao ponteiro inspiraram uma implementação própria com Canvas e Web Animations API. Sem cópia de código, conteúdo ou identidade visual da referência. A biblioteca Motion One existente permanece em Habilidades.
 - Controle global de movimento persistido localmente, preferência reduced-motion, entradas progressivas sem ocultar conteúdo sem JS e pausa de canvas fora da viewport/aba oculta.
+
+## Digital Playground — 9 de novembro de 2026
+
+- Os READMEs públicos de Aranhaverso (`README_INSTALACAO.md`), ListaTarefas-Android, NexusFC, Hogwarts, Ciberfólio, Mundo-Invertido e PokéLab foram consultados via conector GitHub nesta sessão. A distribuição específica do ListaTarefas prevalece sobre descrições genéricas do perfil.
+- Mundo Invertido e PokéLab foram acrescentados com escopo documentado. A base DIO e os direitos de terceiros do Mundo Invertido permanecem creditados no repositório; o catálogo PokéLab é independente/educacional.
+- O inventário `content/repositories.json` registra dez repositórios públicos, incluindo perfil, metodologia e código do portfólio. Os três repositórios privados encontrados não foram incluídos no conteúdo público. Um README privado pôde ser avaliado; outro não foi encontrado e o terceiro repositório estava vazio. Nenhum código privado ou dado de conta foi exportado.
+- Aranhaverso: demonstração visual navegável gerada de `/opt/lampp/htdocs/2350/projaranhaverso/views/` e das fixtures públicas de conteúdo. Hash SHA-256 do SQL de origem: `b9c2fd06f380cbdf0c177f007e42621604e765c2995f983f3efad1df174eb8f2`. O exportador lê apenas INSERTs de atores, filmes e galerias em SQLite em memória; não conecta a banco MySQL e não importa instruções de schema ou DROP.
+- A demo preserva os textos do projeto, incluindo o capítulo de 2026 e as artes conceituais identificadas como não oficiais. Não é uma fonte de notícias de cinema. Recursos pertencem aos respectivos titulares.
+- A demo contém somente HTML, CSS, JavaScript e imagens. Não inclui conexão PHP, configurações, SQL, logs, credenciais ou serviços privados. Galeria usa o dialog local do projeto; trailers abrem explicitamente no YouTube. Não foram adicionadas bibliotecas externas à demo.
+- Os sete projetos originais e seus endereços foram preservados. “Estado não informado” significa que a documentação não confirma conclusão ou desenvolvimento; somente o beta do ListaTarefas é afirmado. Campos ausentes nos estudos técnicos são indicados, sem supor cronogramas, métricas ou escolhas internas de projetos privados.

@@ -7,8 +7,8 @@ const sitemap=await readFile('dist/sitemap.xml','utf8');
 const paths=[...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(m=>new URL(m[1]));
 const config=JSON.parse(await readFile('vercel.json','utf8'));
 const csp=config.headers[0].headers.find(h=>h.key==='Content-Security-Policy').value;
-test('13 URLs canônicas, metadados únicos, H1 único e JSON-LD permitido pela CSP',async()=>{
- assert.equal(paths.length,13);assert.equal(new Set(paths.map(u=>u.href)).size,13);
+test('16 URLs canônicas, metadados únicos, H1 único e JSON-LD permitido pela CSP',async()=>{
+ assert.equal(paths.length,16);assert.equal(new Set(paths.map(u=>u.href)).size,16);
  const titles=new Set(),descriptions=new Set();
  for(const url of paths){
   assert.equal(url.origin,origin);
@@ -23,7 +23,7 @@ test('13 URLs canônicas, metadados únicos, H1 único e JSON-LD permitido pela 
   assert.ok(csp.includes(`'sha256-${createHash('sha256').update(json).digest('base64')}'`));
   for(const image of [...html.matchAll(/(?:src|href)="(assets\/[^"?#]+|styles.css|script.js)"/g)])await readFile('dist/'+image[1]);
  }
- assert.equal(titles.size,13);assert.equal(descriptions.size,13);
+ assert.equal(titles.size,16);assert.equal(descriptions.size,16);
 });
 test('404 e ponte legada não indexam; demos podem receber noindex e sitemap só lista páginas úteis',async()=>{
  assert.match(await readFile('dist/404.html','utf8'),/content="noindex,follow"/);

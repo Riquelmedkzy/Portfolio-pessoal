@@ -49,7 +49,7 @@ for name in ['home','universos']+[m['slug'] for m in movies]:
  # No CDN JS: the source includes an accessible local dialog fallback.
  html=re.sub(r'<(?:script|link)[^>]*(?:src|href)="https://cdn.jsdelivr.net/[^\"]+"[^>]*>(?:</script>)?','',html)
  html=html.replace('</head>','<meta name="robots" content="noindex,follow"><link rel="stylesheet" href="demo.css"><script src="demo.js" defer></script></head>')
- html=html.replace('<body ', '<body ',1).replace('</body>','<aside class="demo-banner"><a href="../../aranhaverso.html" target="_top">Voltar ao portfólio</a><span>Demo visual navegável · dados do projeto · sem backend</span><button type="button" data-demo-pause aria-pressed="false">Pausar movimento</button></aside></body>')
+ html=html.replace('<body ', '<body ',1).replace('</body>','<aside class="demo-banner"><a href="../../aranhaverso.html" target="_blank" rel="noopener noreferrer">Ver estudo de caso</a><span>Demo visual navegável · dados do projeto · sem backend</span><button type="button" data-demo-pause aria-pressed="false">Pausar movimento</button></aside></body>')
  # Trailers open explicitly on YouTube; no third-party embed policy required.
  html=re.sub(r'href="https://www.youtube.com/embed/([^\"]+)" data-fancybox="trailer" data-type="iframe" aria-label="[^\"]+"',r'href="https://www.youtube.com/watch?v=\1" target="_blank" rel="noopener noreferrer"',html)
  html=html.replace('ASSISTIR TRAILER','TRAILER NO YOUTUBE')

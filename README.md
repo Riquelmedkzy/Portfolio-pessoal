@@ -80,3 +80,20 @@ Validação desta alteração: build e quatro testes Node aprovados. Revisão vi
 
 ## Ajustes de apresentação
 Home contém apenas hero com entrada sequenciada (texto, retrato e ações); serviços e processo em servicos.html. Capas com altura uniforme e ícones coloridos. Canonical e sitemap usam https://matheus-riquelme-web.vercel.app. O endereço anterior redireciona preservando caminhos. Search Console: adicionar a nova propriedade por prefixo de URL e enviar sitemap.xml; arquivo de verificação preservado. Indexação não é garantida.
+
+## Digital Playground — prévia local
+
+O trabalho em `codex/riquelme-digital-playground` acrescenta Tech Ecosystem, estudos de caso, filtros, inventário público do GitHub, demo navegável do Aranhaverso e Riquelme Lab. A Home está preservada; somente o link Lab foi acrescentado à navegação compartilhada.
+
+```sh
+npm ci
+npm run build
+npm test
+npm run preview
+```
+
+Abra http://127.0.0.1:8765/habilidades.html. O servidor serve apenas `dist`, com a política de segurança de produção. Documentação de arquitetura, limitações, novos experimentos e exportação de demo: [Digital Playground](docs/digital-playground.md). Evidências atuais: [validação](docs/digital-playground-validation.md); relatos de testes anteriores neste README são históricos e não substituem esse relatório.
+
+Testes de navegador opcionais: `npx playwright install chromium`, inicie a prévia e execute `npm run test:browser`. `CHROME_PATH` seleciona um Chromium/Chrome já instalado; `PREVIEW_URL` permite outro endereço local; `PLAYWRIGHT_MODULE` pode selecionar uma instalação existente. Os testes executam verificações WCAG com axe-core, além dos fluxos funcionais, e salvam o relatório em `.local/playground/`.
+
+Nenhuma publicação automática faz parte desta entrega. Demos são experiências visuais navegáveis e não executam o backend dos projetos. Repositórios privados permanecem protegidos.
