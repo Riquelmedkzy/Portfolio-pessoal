@@ -109,7 +109,21 @@
       "assets/js/motion.js",
       "assets/js/habilidades.js",
       "scripts/ui.mjs"
-    ]
+    ],
+    "lightTheme": {
+      "colors": {
+        "paper": "#f7f8fc",
+        "surface": "#eef2f8",
+        "surface-raised": "#fff",
+        "ink": "#17243b",
+        "muted": "#4e6078",
+        "line": "#ccd5e3",
+        "accent": "#2454c6",
+        "action": "#2856db",
+        "glass": "#fffffff2"
+      },
+      "usage": "Tema claro revisado a pedido do usuário: fundo neutro frio, superfícies brancas, navegação e controles legíveis; geometria, fontes e movimento compartilhados com Orbit. O laboratório exporta as cores efetivamente exibidas."
+    }
   },
   "components": [
     {

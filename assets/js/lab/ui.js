@@ -40,7 +40,11 @@ export function mount(panel) {
       { lift: "translateY(-4px)", scale: "scale(1.04)", none: "none" }[
         v.animation
       ] || "none";
-    code.textContent = `.playground-component {\n  display: inline-flex;\n  align-items: center;\n${shapeStyles}\n  font: 12px/1.7 "DM Sans", sans-serif;\n  gap: 12px;\n  padding: ${v.spacing}px;\n  border: ${v.border}px solid ${v.color};\n  border-radius: ${v.radius}px;\n  color: #f1f5ff;\n  background: #0d1525;\n  box-shadow: 0 calc(${v.shadow}px / 3) ${v.shadow}px #0005;\n  transition: transform 240ms ease-out;\n}\n.playground-component:is(:hover, :focus-visible) {\n  transform: ${transform};\n}\n@media (prefers-reduced-motion: reduce) {\n  .playground-component { transition: none; }\n  .playground-component:is(:hover, :focus-visible) { transform: none; }\n}`;
+    const css = getComputedStyle(preview);
+    const ink = css.getPropertyValue("--ui-ink").trim() || "#f1f5ff",
+      surface = css.getPropertyValue("--ui-surface").trim() || "#0d1525";
+    const shadow = css.getPropertyValue("--sample-shadow").trim() || "#0005";
+    code.textContent = `.playground-component {\n  display: inline-flex;\n  align-items: center;\n${shapeStyles}\n  font: 12px/1.7 "DM Sans", sans-serif;\n  gap: 12px;\n  padding: ${v.spacing}px;\n  border: ${v.border}px solid ${v.color};\n  border-radius: ${v.radius}px;\n  color: ${ink};\n  background: ${surface};\n  box-shadow: 0 calc(${v.shadow}px / 3) ${v.shadow}px ${shadow};\n  transition: transform 240ms ease-out;\n}\n.playground-component:is(:hover, :focus-visible) {\n  transform: ${transform};\n}\n@media (prefers-reduced-motion: reduce) {\n  .playground-component { transition: none; }\n  .playground-component:is(:hover, :focus-visible) { transform: none; }\n}`;
   }
   form.addEventListener("submit", (e) => e.preventDefault());
   controls.forEach((c) => c.addEventListener("input", update));
@@ -64,5 +68,9 @@ export function mount(panel) {
     }
   });
   update();
+  new MutationObserver(update).observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ["data-theme"],
+  });
   return {};
 }

@@ -20,11 +20,12 @@
     "imageAlt": "Interface do Aranhaverso em computador",
     "imageNote": "Interface renderizada localmente a partir do projeto. Dados de demonstração do próprio repositório.",
     "featured": true,
-    "status": "unknown",
+    "status": "completed",
     "type": "web",
     "architecture": "Front Controller em index.php, controllers separados, models com MySQLi e consultas preparadas e views para home e detalhes dos filmes. JavaScript controla a troca de protagonistas, filtros e modais; CSS organiza a composição responsiva.",
     "process": "O README registra a reforma visual da home, filmografia e detalhes, preservando a arquitetura MVC e as rotas do projeto. A sequência completa do desenvolvimento ainda não está documentada.",
-    "demo": "demos/aranhaverso/index.html"
+    "demo": "demos/aranhaverso/index.html",
+    "listed": true
   },
   {
     "slug": "lista-tarefas",
@@ -43,11 +44,12 @@
     "outcome": "A versão 2.0 está disponível como beta para Android. O repositório público reúne informações de distribuição; o código-fonte é privado. Notificações reais não estão disponíveis nesta versão.",
     "repository": "https://github.com/Riquelmedkzy/ListaTarefas-Android",
     "release": "https://github.com/Riquelmedkzy/ListaTarefas-Android/releases/tag/v2.0.0-beta.1",
-    "featured": true,
-    "status": "beta",
+    "featured": false,
+    "status": "completed",
     "type": "mobile",
     "architecture": "Aplicativo Android em React Native, Expo e TypeScript. O repositório público contém apenas a distribuição. A organização interna dos módulos e as decisões de persistência não estão documentadas publicamente.",
-    "process": "A documentação pública registra a reconstrução e ampliação do aplicativo na versão 2.0 beta. O histórico interno de desenvolvimento não está disponível."
+    "process": "A documentação pública registra a reconstrução e ampliação do aplicativo na versão 2.0 beta. O histórico interno de desenvolvimento não está disponível.",
+    "listed": true
   },
   {
     "slug": "nexusfc",
@@ -73,10 +75,11 @@
     "imageAlt": "Interface do NexusFC em computador",
     "imageNote": "Interface renderizada localmente a partir do projeto. Protótipo visual com notícias ilustrativas.",
     "featured": true,
-    "status": "unknown",
+    "status": "development",
     "type": "web",
     "architecture": "Front Controller com lista explícita de rotas, controllers de autenticação e autorização, models com consultas preparadas e transações e views do portal e dos painéis. MySQL/MariaDB armazena o conteúdo.",
-    "process": "Construído no contexto do TCC do curso técnico. A documentação descreve instalação local e verificações de sintaxe; o cronograma e a sequência das etapas ainda não estão documentados."
+    "process": "Construído no contexto do TCC do curso técnico. A documentação descreve instalação local e verificações de sintaxe; o cronograma e a sequência das etapas ainda não estão documentados.",
+    "listed": true
   },
   {
     "slug": "hogwarts",
@@ -96,11 +99,12 @@
     "outcome": "Cinco páginas podem ser exploradas diretamente no navegador.",
     "demo": "demos/hogwarts/index.html",
     "featured": false,
-    "status": "unknown",
+    "status": "completed",
     "type": "web",
     "repository": "https://github.com/Riquelmedkzy/projhogwarts",
     "architecture": "A organização interna e as decisões técnicas ainda não estão documentadas no catálogo.",
-    "process": "Etapas e cronograma ainda não documentados."
+    "process": "Etapas e cronograma ainda não documentados.",
+    "listed": true
   },
   {
     "slug": "sexta-feira",
@@ -119,10 +123,11 @@
     "solution": "Chat de terminal, voz push-to-talk, memórias e lembretes, conforme a documentação do catálogo original.",
     "outcome": "A execução depende de modelos locais. Demonstração pública ainda não disponível.",
     "featured": false,
-    "status": "unknown",
+    "status": "completed",
     "type": "local",
     "architecture": "A organização interna e as decisões técnicas ainda não estão documentadas no catálogo.",
-    "process": "Etapas e cronograma ainda não documentados."
+    "process": "Etapas e cronograma ainda não documentados.",
+    "listed": false
   },
   {
     "slug": "ciberfolio",
@@ -141,11 +146,12 @@
     "solution": "Páginas PHP e persistência em MySQL, conforme a documentação do catálogo original.",
     "outcome": "A aplicação depende de configuração própria. Demonstração pública ainda não disponível.",
     "featured": false,
-    "status": "unknown",
+    "status": "completed",
     "type": "web",
     "repository": "https://github.com/Riquelmedkzy/ciberfolio",
     "architecture": "A organização interna e as decisões técnicas ainda não estão documentadas no catálogo.",
-    "process": "Etapas e cronograma ainda não documentados."
+    "process": "Etapas e cronograma ainda não documentados.",
+    "listed": true
   },
   {
     "slug": "gestao-compras",
@@ -162,10 +168,11 @@
     "solution": "Controladores e páginas para cadastro, autenticação e perfil, conforme a documentação do catálogo original.",
     "outcome": "A aplicação depende de configuração e banco próprios. Demonstração pública ainda não disponível.",
     "featured": false,
-    "status": "unknown",
+    "status": "completed",
     "type": "web",
     "architecture": "A organização interna e as decisões técnicas ainda não estão documentadas no catálogo.",
-    "process": "Etapas e cronograma ainda não documentados."
+    "process": "Etapas e cronograma ainda não documentados.",
+    "listed": true
   },
   {
     "slug": "mundo-invertido",
@@ -186,10 +193,11 @@
     "outcome": "Código e instruções locais disponíveis. Ainda sem demonstração pública integrada.",
     "repository": "https://github.com/Riquelmedkzy/Mundo-Invertido",
     "featured": false,
-    "status": "unknown",
+    "status": "completed",
     "type": "web",
     "architecture": "Aplicação PHP com MVC, MySQL/MariaDB e áreas públicas e autenticadas. Créditos da base DIO e dos recursos visuais estão no repositório.",
-    "process": "Consulte o README para instalação e verificações. A sequência completa de desenvolvimento ainda não está documentada."
+    "process": "Consulte o README para instalação e verificações. A sequência completa de desenvolvimento ainda não está documentada.",
+    "listed": true
   },
   {
     "slug": "pokelab",
@@ -208,10 +216,11 @@
     "solution": "Catálogo em JSON, contas e equipes em SQLite, consultas parametrizadas, CSRF e controle de versão da equipe.",
     "outcome": "Código e testes de integração documentados; execução local com PHP 8.1+. Ainda sem demonstração pública integrada.",
     "repository": "https://github.com/Riquelmedkzy/pokelab",
-    "featured": false,
-    "status": "unknown",
+    "featured": true,
+    "status": "completed",
     "type": "web",
     "architecture": "Catálogo em JSON, contas e equipes em SQLite, consultas parametrizadas, CSRF e controle de versão da equipe.",
-    "process": "Consulte o README para instalação e verificações. A sequência completa de desenvolvimento ainda não está documentada."
+    "process": "Consulte o README para instalação e verificações. A sequência completa de desenvolvimento ainda não está documentada.",
+    "listed": true
   }
 ]

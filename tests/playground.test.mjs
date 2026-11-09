@@ -73,14 +73,13 @@ test("todos os estudos têm dez áreas técnicas e links preservados", async () 
       assert.ok(html.includes(url));
   }
 });
-test("Home e seus assets mantêm conteúdo original; somente navegação recebe Lab", async () => {
+test("Home preserva conteúdo, retrato e scripts orbitais", async () => {
   const previous = execFileSync("git", ["show", "main:index.html"], {
       encoding: "utf8",
     }),
     current = await readFile("index.html", "utf8");
   assert.equal(current.replace('<a href="lab.html" >Lab</a>', ""), previous);
   for (const path of [
-    "styles.css",
     "assets/js/experience.js",
     "assets/js/motion.js",
     "assets/js/entrance.js",
@@ -121,9 +120,9 @@ test("demo Aranhaverso contém 11 páginas e somente arquivos públicos", async 
   assert.doesNotMatch(html, /index\.php|cdn\.jsdelivr/);
   assert.equal([...html.matchAll(/class="movie-tile"/g)].length, 9);
 });
-test("inventário inclui somente dez repositórios públicos consultados", async () => {
+test("inventário inclui os sete repositórios públicos selecionados", async () => {
   const repos = JSON.parse(await readFile("content/repositories.json"));
-  assert.equal(repos.length, 10);
+  assert.equal(repos.length, 7);
   for (const name of [
     "Lista-de-Tarefas",
     "Sistema-de-futebol",

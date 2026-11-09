@@ -39,3 +39,9 @@ Evidências de QA ficam fora da saída pública e não são versionadas como par
 Resultados de axe não são uma certificação de acessibilidade. Não houve teste em aparelho físico, leitor de tela, Safari/Firefox ou execução de backend dos projetos. Core Web Vitals de usuários e pontuações Lighthouse não foram medidos nesta entrega. O build não foi publicado; validação em domínio de produção depende de publicação futura autorizada.
 
 As demos são visuais e navegáveis. A distribuição beta do ListaTarefas é preservada, sem inventar um aplicativo web ou telas reais. Lacunas documentais e estados de projeto não confirmados continuam explícitos.
+
+## Revisão posterior — Sobre e modo claro
+
+A pedido do usuário, o contador numérico em Sobre foi substituído por “Ideias em prática”. O tema claro foi refinado com fundo neutro frio, superfícies brancas, nova hierarquia de contraste e painéis orbitais claros; Home mantém conteúdo, fotografia, geometria e scripts de movimento. A comparação exata do CSS global citada na auditoria inicial é histórica: os estilos claros agora foram modificados com autorização.
+
+Após a revisão: build e 14 testes Node aprovados. Sobre, Home, Habilidades, Projetos, Lab e Contato foram verificados em 1440 e 390px (12 combinações), com zero erros JS, overflow ou violações axe WCAG A/AA detectadas. Alternância de tema atualiza a prévia e o CSS gerado no Lab. Capturas e relatório locais em `.local/playground/light-after-*` e `light-report.json`. Sem deploy.

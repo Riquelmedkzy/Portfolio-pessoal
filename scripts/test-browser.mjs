@@ -103,39 +103,12 @@ try {
       );
     },
   );
-  await check(
-    "filtros combinados, resultados vazios e restauração",
-    async () => {
-      await goto("projetos.html");
-      await page.locator('[data-project-filter="type"]').selectOption("mobile");
-      assert.equal(
-        await page.locator("[data-project-entry]:visible").count(),
-        1,
-      );
-      assert.ok(
-        await page
-          .locator("[data-project-entry]:visible")
-          .innerText()
-          .then((t) => t.includes("ListaTarefas")),
-      );
-      await page
-        .locator('[data-project-filter="technologies"]')
-        .selectOption("PHP");
-      assert.equal(
-        await page.locator("[data-project-entry]:visible").count(),
-        0,
-      );
-      assert.equal(
-        await page.locator("[data-project-empty]").isVisible(),
-        true,
-      );
-      await page.locator("[data-reset-filters]").first().click();
-      assert.equal(
-        await page.locator("[data-project-entry]:visible").count(),
-        9,
-      );
-    },
-  );
+  await check("catálogo sem filtros e com os destaques selecionados", async()=>{
+    await goto("projetos.html");
+    assert.equal(await page.locator('[data-project-filter]').count(),0);
+    assert.equal(await page.locator('[data-project-entry]:visible').count(),8);
+    assert.deepEqual(await page.locator('.editorial-project h2').allTextContents(),['Aranhaverso ','PokéLab ','NexusFC ']);
+  });
   await check(
     "UI Playground atualiza prévia e CSS, copia/restaura valores",
     async () => {
@@ -434,7 +407,7 @@ try {
       await fallback.goto(`${origin}/projetos.html`);
       assert.equal(
         await fallback.locator("[data-project-entry]:visible").count(),
-        9,
+        8,
       );
       assert.equal(await fallback.locator("#navigation a").count(), 7);
     },

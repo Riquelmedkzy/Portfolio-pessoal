@@ -16,15 +16,15 @@ colors:
   panel-cyan: "#70d7fb"
   panel-blue: "#729fff"
   panel-violet: "#c4c3ff"
-  light-paper: "#f4f7ff"
-  light-surface: "#e9effb"
+  light-paper: "#f7f8fc"
+  light-surface: "#eef2f8"
   light-surface-raised: "#fff"
-  light-ink: "#101d38"
-  light-muted: "#4e607c"
-  light-line: "#c6d2e8"
-  light-accent: "#2856c9"
+  light-ink: "#17243b"
+  light-muted: "#4e6078"
+  light-line: "#ccd5e3"
+  light-accent: "#2454c6"
   light-action: "#2856db"
-  light-glass: "#f4f7ffe8"
+  light-glass: "#fffffff2"
 typography:
   display:
     fontFamily: "DM Sans, Arial, sans-serif"
@@ -216,3 +216,5 @@ O formulário usa superfície, contorno e padding de 32px, reduzido para 23px no
 - **Don't** anime o retrato ou transforme os seis painéis em uma única imagem giratória.
 - **Don't** invente métricas, credenciais, capturas de produto ou confirmação de envio.
 
+
+<!-- Revisão autorizada do modo claro — 9/11/2026: fundo neutro frio, painéis brancos, contornos azul-acinzentados, ciano mais profundo em controles e painéis orbitais claros. Composição, tipografia e animações compartilhadas preservadas. Capturas reais dos projetos mantêm as cores da aplicação original. O UI Playground acompanha o tema e exporta as cores exibidas. -->

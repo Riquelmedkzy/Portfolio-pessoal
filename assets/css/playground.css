@@ -1116,9 +1116,9 @@ html[data-theme="light"] .project-state[data-state="beta"] {
   padding: var(--ui-spacing);
   border: var(--ui-border) solid var(--ui-color);
   border-radius: var(--ui-radius);
-  color: #f1f5ff;
-  background: #0d1525;
-  box-shadow: 0 calc(var(--ui-shadow) / 3) var(--ui-shadow) #0005;
+  color: var(--ui-ink, #f1f5ff);
+  background: var(--ui-surface, #0d1525);
+  box-shadow: 0 calc(var(--ui-shadow) / 3) var(--ui-shadow) var(--sample-shadow, #0005);
   font-size: 12px;
   transition: transform 0.24s ease-out;
 }
@@ -1144,7 +1144,7 @@ html[data-theme="light"] .project-state[data-state="beta"] {
 .playground-component p {
   font-size: 12px;
   max-width: 24ch;
-  color: #b2bed5;
+  color: var(--muted);
 }
 .code-heading {
   display: flex;
@@ -1647,3 +1647,23 @@ html[data-theme="light"] .project-state[data-state="beta"] {
     grid-row: auto;
   }
 }
+
+/* Bright surfaces, inked connections and readable accents for the light workbench. */
+html[data-theme=light] .tech-inspector,html[data-theme=light] .preview-label,html[data-theme=light] .animation-stage,html[data-theme=light] .terminal-title{background:var(--surface-raised)}
+html[data-theme=light] .tech-node{background:#fff}
+html[data-theme=light] .tech-node.is-selected{background:#eaf1ff;box-shadow:0 6px 18px #234f9c14}
+html[data-theme=light] .tech-node.is-related:not(.is-selected){border-color:#829bc5}
+html[data-theme=light] .tech-connections path{stroke:#8c9fbb;opacity:.65}
+html[data-theme=light] .tech-connections .is-connected{stroke:var(--accent);opacity:1}
+html[data-theme=light] img[src="assets/icons/github.svg"]{filter:brightness(.2)}
+html[data-theme=light] .lab-tablist button[aria-selected=true]{background:#eaf1ff;border-color:#bed0ed}
+html[data-theme=light] .lab-tablist button[aria-selected=true]>svg,html[data-theme=light] .terminal label{color:#166b87}
+html[data-theme=light] .terminal input{caret-color:#166b87}
+html[data-theme=light] .ui-preview{--ui-ink:var(--ink);--ui-surface:#fff;--sample-shadow:#20385b1f;background:#fff}
+html[data-theme=light] .ui-result pre{background:#fff;color:#2454a6}
+html[data-theme=light] .anim-path{stroke:#16738e}
+html[data-theme=light] .inspector-led{background:#16738e}
+html[data-theme=light] .task-art{background:radial-gradient(ellipse at 50% 40%,#e3ddf9,#edf0fa 78%);color:#35295d}
+html[data-theme=light] .task-art-top,html[data-theme=light] .task-art-bottom{color:#5a5275}
+html[data-theme=light] .task-art-bottom{border-color:#c9c2de}
+html[data-theme=light] .task-art-bottom strong{color:#35295d}
